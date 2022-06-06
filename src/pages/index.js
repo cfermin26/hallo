@@ -1,184 +1,175 @@
-import * as React from "react"
+import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import Helmet from "react-helmet";
+import Layout from "../components/Layout";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Form from "react-bootstrap/Form";
+import ContactForm from "../components/ContactForm";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+    <Layout>
+      <main>
+        <Helmet>
+          <title>Hallo</title>
+          <meta
+            name="keywords"
+            content="hallo, internet, planes, velocidad, experiencia, distribuidores, ecuador"
+          />
+          <meta
+            name="description"
+            content="Hallo es una marca creada
+            como imagen para la provisión del servicio de acceso a
+            internet en el ecuador, que opera bajo los estándares de
+            calidad alemán."
+          />
+          <meta property="og:title" content="Hallo" />
+          <meta property="og:url" content="https://hallo.ec" />
+          <meta property="og:type" content="article" />
+          <meta
+            property="og:description"
+            content="Hallo es una marca creada
+            como imagen para la provisión del servicio de acceso a
+            internet en el ecuador, que opera bajo los estándares de
+            calidad alemán."
+          />
+        </Helmet>
 
-export default IndexPage
+        <Container fluid className="background">
+          <Row>
+            <Col md={12} className="px-0">
+              <StaticImage
+                src="../images/home/hallo-banner.png"
+                alt="Hallo banner"
+                className="w-100"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <StaticImage src="../images/home/flash.png" alt="Hallo" />
+            </Col>
+
+            <Col md={6} className="text-center my-auto">
+              <h2 className="welcome-title mt-4 mt-md-0">Bienvenido a</h2>
+              <h1 className="welcome-subtitle">
+                LA CONEXIÓN MÁS <br />
+                <span className="raleway-bold">RÁPIDA</span>
+                DEL PAÍS
+              </h1>
+              <p className="welcome-text px-2 px-md-0 mx-auto mt-3">
+                Sube todas tus fotos más rápido que cualquier otro proveedor de
+                servicios. Carga y descarga videos, archivos de gran peso o lo
+                que necesites. Vive la mejor experiencia en internet a
+                velocidades incomparables.
+              </p>
+            </Col>
+          </Row>
+
+          <Row className="mb-4 mb-md-5 mt-3 mt-md-0">
+            <Col md={12}>
+              <div className="plan-card shadow mx-auto px-4 px-md-5 py-3 py-md-4">
+                <Container>
+                  <Row>
+                    <Col md={12}>
+                      <h3 className="plan-title">
+                        Elige tu <span className="orange-text">PLAN IDEAL</span>
+                      </h3>
+                      <h4 className="plan-subtitle">
+                        <span className="orange-text">¿</span>NECESITAS CONEXION
+                        A INTERNET PARA{" "}
+                        <span className="orange-text">HOGAR O NEGOCIO?</span>
+                      </h4>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={12}>
+                      <StaticImage
+                        src="../images/home/hallo-planes.png"
+                        alt="Hallo planes"
+                      />
+                    </Col>
+                  </Row>
+                  <Row className="mt-2 mb-2">
+                    <Col xs={6} className="text-center">
+                      <Button variant="secondary" className="ms-md-5 plan-btn">
+                        HOGAR
+                      </Button>
+                    </Col>
+                    <Col xs={6} className="text-center">
+                      <Button variant="secondary" className="me-md-5 plan-btn">
+                        NEGOCIO
+                      </Button>
+                    </Col>
+                  </Row>
+                </Container>
+              </div>
+            </Col>
+          </Row>
+
+          <Row className="experience-bg">
+            <Col md={12}>
+              <Container>
+                <Row>
+                  <Col md={6} className="my-auto px-4 px-md-0">
+                    <Row>
+                      <Col md={12} className="mt-5 mt-md-0">
+                        <StaticImage
+                          src="../images/home/experiencia-hallo.png"
+                          alt="Experiencia hallo"
+                        />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col md={12} className="mt-3 mt-md-4">
+                        <FloatingLabel
+                          controlId="floatingSelect"
+                          label="ELIGE TU AGENCIA"
+                        >
+                          <Form.Select aria-label="Floating label select example">
+                            <option value="">- Selecciona -</option>
+                            <option value="1">Azuay</option>
+                            <option value="2">El Oro</option>
+                            <option value="3">Santa Elena</option>
+                            <option value="4">Manabí</option>
+                            <option value="5">Machala</option>
+                          </Form.Select>
+                        </FloatingLabel>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col md={6}>
+                    <StaticImage
+                      src="../images/home/hallo-experiencia.png"
+                      alt="Hallo experiencia"
+                    />
+                  </Col>
+                </Row>
+              </Container>
+            </Col>
+          </Row>
+          <Row className="my-md-4 my-md-5">
+            <Col md={12}>
+              <ContactForm />
+            </Col>
+          </Row>
+
+          <Row>
+            <Col md={12} className="px-0">
+              <StaticImage
+                src="../images/home/hallo-mapa.png"
+                alt="Hallo mapa"
+              />
+            </Col>
+          </Row>
+        </Container>
+      </main>
+    </Layout>
+  );
+};
+
+export default IndexPage;

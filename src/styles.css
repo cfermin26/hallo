@@ -1,0 +1,427 @@
+@font-face {
+  font-display: swap;
+  font-family: "Breathing";
+  src: url("fonts/Breathing.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "BalooBhainaOdia";
+  src: url("fonts/BalooBhainaOdia-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova-Light";
+  src: url("fonts/ProximaNova-Light.otf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova-Regular";
+  src: url("fonts/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ProximaNova-Bold";
+  src: url("fonts/ProximaNova-Bold.otf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway-Regular";
+  src: url("fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway-Medium";
+  src: url("fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway-Bold";
+  src: url("fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "LemonMilk-Light";
+  src: url("fonts/LemonMilk-Light.otf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "LemonMilk-Medium";
+  src: url("fonts/LemonMilk-Medium.otf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "LemonMilk-Bold";
+  src: url("fonts/LemonMilk-Bold.otf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat-Light";
+  src: url("fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat-Regular";
+  src: url("fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat-Bold";
+  src: url("fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "BaiJamjuree-Regular";
+  src: url("fonts/BaiJamjuree-Regular.ttf");
+}
+
+body {
+  font-family: "Raleway-Regular";
+}
+
+.background {
+  background-image: url("../src/images/assets/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar-dark {
+  background-color: #d2482b;
+  color: #ffffff;
+}
+
+.navbar-dark .nav-items .nav-link {
+  color: #ffffff !important;
+  font-family: "BalooBhainaOdia";
+  font-size: 16px;
+  font-weight: 400;
+  margin: 2px 12px;
+}
+
+.navbar-dark .nav-items .nav-link:hover {
+  color: #ff810d !important;
+}
+
+.navbar-dark .nav-items .active {
+  border-bottom: 2px solid #ff810d !important;
+  color: #ff810d !important;
+}
+
+#basic-navbar-nav .nav-items a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+#basic-navbar-nav .nav-items a::after {
+  background: #ff810d;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  transform: scaleX(0);
+  transition: transform 0.35s ease;
+  width: 100%;
+}
+
+#basic-navbar-nav .nav-items a:hover::after {
+  transform: scaleX(1);
+}
+
+.light-logo {
+  width: 90px;
+}
+
+.social-nav .nav-link {
+  padding: 3px !important;
+}
+
+.social-logo {
+  width: 35px;
+}
+
+.title {
+  color: #ff8010;
+  font-family: "LemonMilk-Bold";
+  font-size: 28px;
+}
+
+.text {
+  color: #606060;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+}
+
+.page-cont {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+}
+
+.welcome-title {
+  color: #eb800c;
+  font-family: "Raleway-Medium";
+  font-size: 30px;
+}
+
+.welcome-subtitle {
+  font-family: "Raleway-Medium";
+  font-size: 50px;
+  line-height: 1.1;
+}
+
+.raleway-bold {
+  font-family: "Raleway-Bold";
+}
+
+.montserrat-bold {
+  font-family: "Montserrat-Bold";
+}
+
+.welcome-text {
+  font-family: "Raleway-Regular";
+  font-size: 16px;
+  max-width: 550px;
+}
+
+.orange-text {
+  color: #ed800d;
+}
+
+.plan-card {
+  background-color: #ffffff;
+  border-radius: 45px;
+  margin-top: -45px;
+  max-width: 850px;
+  position: relative;
+  z-index: 999;
+}
+
+.plan-title {
+  font-family: "Raleway-Bold";
+  font-size: 32px;
+}
+
+.plan-subtitle {
+  font-family: "Raleway-Medium";
+  font-size: 18px;
+}
+
+.plan-btn {
+  background-color: #d6d6d6;
+  border-radius: 20px;
+  border: 0;
+  color: #ef870f;
+  font-family: "Raleway-Bold";
+  font-size: 21px;
+  min-width: 140px;
+}
+
+.experience-bg {
+  background-color: #ff5b00;
+}
+
+.info-form {
+  max-width: 800px;
+}
+
+.info-title {
+  font-family: "Raleway-Bold";
+  font-size: 32px;
+  text-align: center;
+}
+
+.write-us-title {
+  font-family: "LemonMilk-Light";
+  font-size: 18px;
+  text-align: center;
+  text-align: left;
+}
+
+.call-us-title {
+  font-family: "LemonMilk-Light";
+  font-size: 16px;
+  text-align: center;
+  text-align: right;
+}
+
+.send-btn {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+}
+
+/***** universo hallo *****/
+.ready-title {
+  color: #3c3c3b;
+  font-family: "LemonMilk-Bold";
+  font-size: 26px;
+}
+
+.new-title {
+  color: #3c3c3b;
+  font-family: "LemonMilk-Bold";
+  font-size: 34px;
+}
+
+.experience-title {
+  color: #ff7100;
+  font-family: "LemonMilk-Bold";
+  font-size: 40px;
+}
+
+.home-security {
+  font-family: "BaiJamjuree-Regular";
+  font-size: 36px;
+}
+
+.universe-text {
+  color: #1d1d1b;
+  font-family: "BaiJamjuree-Regular";
+  font-size: 18px;
+}
+
+.universe-text li {
+  margin-top: 10px;
+}
+
+/***** footer *****/
+footer {
+  background-color: #54585c;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-family: "Raleway-Bold";
+  font-size: 21px;
+}
+
+footer p {
+  font-size: 18px;
+  color: #8b8b8b;
+  margin-bottom: 9px;
+  line-height: 1.1;
+}
+
+@media (max-width: 575.98px) {
+  .social-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .title {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .page-cont {
+    border-radius: 24px;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+  }
+
+  .welcome-subtitle {
+    font-size: 28px;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+  }
+
+  .orange-text {
+    color: #ed800d;
+  }
+
+  .plan-card {
+    border-radius: 25px;
+    margin-top: 0;
+  }
+
+  .plan-title {
+    font-size: 24px;
+  }
+
+  .plan-subtitle {
+    font-size: 16px;
+  }
+
+  .plan-btn {
+    border-radius: 20px;
+    font-size: 16px;
+  }
+
+  .info-title {
+    font-size: 21px;
+    line-height: 1.1;
+  }
+
+  .write-us-title {
+    font-size: 12px;
+  }
+
+  .call-us-title {
+    font-size: 12px;
+  }
+
+  .send-btn {
+    border-radius: 12px;
+  }
+
+  /***** universo hallo *****/
+  .ready-title {
+    font-size: 16px;
+  }
+
+  .new-title {
+    font-size: 18px;
+  }
+
+  .experience-title {
+    font-size: 24px;
+  }
+
+  .home-security {
+    font-size: 26px;
+  }
+
+  .universe-text {
+    font-size: 14px;
+  }
+
+  .universe-text li {
+    margin-top: 10px;
+  }
+
+  /***** footer *****/
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 14px;
+    margin-bottom: 9px;
+    line-height: 1.1;
+  }
+}
+
+/* @media (max-width: 991.98px) {
+
+} */

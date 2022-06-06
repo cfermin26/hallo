@@ -31,10 +31,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-html-attributes',
       options: {
-        fonts: [`Lato`, `Baloo Bhaina 2\:100,400,700`],
-        display: "swap",
+        lang: 'es'
       },
     },
   ],
