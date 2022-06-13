@@ -40,7 +40,7 @@ const QuienesSomos = () => {
               <StaticImage
                 src="../images/quienes-somos/quienes-somos-banner.png"
                 alt="Hallo banner"
-                className="w-100"
+                layout="fullWidth"
               />
             </Col>
           </Row>

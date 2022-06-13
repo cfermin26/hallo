@@ -41,7 +41,7 @@ const PreguntasFrecuentes = () => {
               <StaticImage
                 src="../images/preguntas-frecuentes/preguntas-frecuentes.png"
                 alt="Hallo banner"
-                className="w-100"
+                layout="fullWidth"
               />
             </Col>
           </Row>

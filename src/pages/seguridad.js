@@ -40,7 +40,7 @@ const Seguridad = () => {
               <StaticImage
                 src="../images/seguridad/seguridad-banner.png"
                 alt="Hallo banner"
-                className="main-banner w-100"
+                layout="fullWidth"
               />
             </Col>
           </Row>

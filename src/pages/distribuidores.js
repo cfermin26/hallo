@@ -41,7 +41,7 @@ const Distribuidores = () => {
               <StaticImage
                 src="../images/distribuidores/distribuidores-banner.png"
                 alt="Hallo banner"
-                className="main-banner w-100"
+                layout="fullWidth"
               />
             </Col>
           </Row>

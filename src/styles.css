@@ -231,6 +231,22 @@ body {
   min-width: 140px;
 }
 
+.agency-list {
+  font-family: "LemonMilk-Light";
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.agencias .dropdown {
+  display: inline-block;
+  padding: 4px;
+}
+
+.agencias .dropdown .btn-danger {
+  background-color: #d2482b;
+  border: none;
+}
+
 .experience-bg {
   background-color: #ff5b00;
 }
@@ -296,6 +312,41 @@ body {
 
 .universe-text li {
   margin-top: 10px;
+}
+
+/***** Agencias ******/
+
+.agency-cont {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  max-width: 1000px;
+}
+
+.agency-text {
+  color: #606060;
+  font-family: "Montserrat-Regular";
+  font-size: 18px;
+}
+
+.agency-card {
+  background-color: #ffffff;
+  border-radius: 60px;
+}
+
+.agency-title {
+  color: #000000;
+  font-family: "LemonMilk-Light";
+  font-size: 28px;
+}
+
+.agency-subtitle {
+  color: #ff8010;
+  font-family: "LemonMilk-Bold";
+  font-size: 28px;
+}
+
+.agency-card img {
+  cursor: pointer;
 }
 
 /***** footer *****/
@@ -407,6 +458,27 @@ footer p {
 
   .universe-text li {
     margin-top: 10px;
+  }
+
+  /***** Agencias ******/
+  .agency-cont {
+    border-radius: 24px;
+  }
+
+  .agency-text {
+    font-size: 14px;
+  }
+
+  .agency-card {
+    border-radius: 30px;
+  }
+
+  .agency-title {
+    font-size: 18px;
+  }
+
+  .agency-subtitle {
+    font-size: 18px;
   }
 
   /***** footer *****/

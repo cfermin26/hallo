@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -22,9 +23,15 @@ const Menu = () => {
             <Nav.Link as={Link} to="/" activeClassName="active">
               Inicio
             </Nav.Link>
-            <Nav.Link as={Link} to="/agencias" activeClassName="active">
+            <AnchorLink
+              as={Link}
+              to="/#agencias"
+              activeClassName="active"
+              className="stripped nav-link"
+              stripHash
+            >
               Agencias
-            </Nav.Link>
+            </AnchorLink>
             <Nav.Link as={Link} to="/contacto" activeClassName="active">
               Contacto
             </Nav.Link>
@@ -35,7 +42,13 @@ const Menu = () => {
               Soporte
             </Nav.Link>
             <Nav.Link as={Link} to="/distribuidores" activeClassName="active">
-              Distribuidores
+              Franquicias
+            </Nav.Link>
+            <Nav.Link as={Link} to="/universo-hallo" activeClassName="active">
+              Universo Hallo
+            </Nav.Link>
+            <Nav.Link as={Link} to="/hallo-tv" activeClassName="active">
+              Hallo TV
             </Nav.Link>
           </Nav>
           <Nav className="social-nav">

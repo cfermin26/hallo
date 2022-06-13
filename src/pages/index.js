@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Helmet from "react-helmet";
 import Layout from "../components/Layout";
@@ -6,8 +7,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
+import Dropdown from "react-bootstrap/Dropdown";
+/* import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Form from "react-bootstrap/Form"; */
 import ContactForm from "../components/ContactForm";
 
 const IndexPage = () => {
@@ -45,13 +47,17 @@ const IndexPage = () => {
               <StaticImage
                 src="../images/home/hallo-banner.png"
                 alt="Hallo banner"
-                className="w-100"
+                layout="fullWidth"
               />
             </Col>
           </Row>
           <Row>
-            <Col md={6}>
-              <StaticImage src="../images/home/flash.png" alt="Hallo" />
+            <Col md={6} className="px-0">
+              <StaticImage
+                src="../images/home/flash.png"
+                alt="Hallo"
+                layout="fullWidth"
+              />
             </Col>
 
             <Col md={6} className="text-center my-auto">
@@ -124,8 +130,8 @@ const IndexPage = () => {
                         />
                       </Col>
                     </Row>
-                    <Row>
-                      <Col md={12} className="mt-3 mt-md-4">
+                    {/* <Row>
+                      <Col md={12} className="mt-3 mt-md-4" id="agencias">
                         <FloatingLabel
                           controlId="floatingSelect"
                           label="ELIGE TU AGENCIA"
@@ -139,6 +145,102 @@ const IndexPage = () => {
                             <option value="5">Machala</option>
                           </Form.Select>
                         </FloatingLabel>
+                      </Col>
+                    </Row> */}
+                    <Row>
+                      <Col md={12} className="mt-3 mt-md-4 agencias">
+                        <h3 className="agency-list mt-4" id="agencias">
+                          ELIGE TU AGENCIA
+                        </h3>
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Azuay
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/cuenca">
+                              Cuenca
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Bolívar
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/las-naves">
+                              Las Naves
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Cañar
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/la-troncal">
+                              La Troncal
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Loja
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/loja">
+                              Loja
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Los Ríos
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/quinsaloma">
+                              Quinsaloma
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Pichincha
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/quito">
+                              Quito
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Santa Elena
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/la-libertad">
+                              La Libertad
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                          <Dropdown.Toggle variant="danger">
+                            Zamora Chinchipe
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item as={Link} to="/yantzaza">
+                              Yantzaza
+                            </Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/zamora">
+                              Zamora
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
                       </Col>
                     </Row>
                   </Col>
@@ -163,6 +265,7 @@ const IndexPage = () => {
               <StaticImage
                 src="../images/home/hallo-mapa.png"
                 alt="Hallo mapa"
+                layout="fullWidth"
               />
             </Col>
           </Row>

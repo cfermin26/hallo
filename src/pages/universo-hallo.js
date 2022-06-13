@@ -40,12 +40,12 @@ const UniversoHallo = () => {
               <StaticImage
                 src="../images/universo-hallo/universo-hallo-banner.png"
                 alt="Hallo banner"
-                className="w-100"
+                layout="fullWidth"
               />
             </Col>
           </Row>
-          <Row className="d-flex justify-content-center">
-            <Col md={6} className="my-3 my-md-4">
+          <Row>
+            <Col md={12} className="my-3 my-md-4">
               <Container className="text-center page-cont py-1">
                 <Row className="my-4 my-md-5">
                   <Col md={12}>

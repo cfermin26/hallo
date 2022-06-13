@@ -42,7 +42,7 @@ const Contacto = () => {
                 <StaticImage
                   src="../images/home/hallo-banner.png"
                   alt="Hallo banner"
-                  className="main-banner w-100"
+                  layout="fullWidth"
                 />
               </Card>
             </Col>
