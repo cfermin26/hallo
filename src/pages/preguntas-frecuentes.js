@@ -39,7 +39,7 @@ const PreguntasFrecuentes = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/preguntas-frecuentes/preguntas-frecuentes.png"
+                src="../images/preguntas-frecuentes/preguntas-frecuentes.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />

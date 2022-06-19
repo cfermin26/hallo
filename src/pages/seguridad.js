@@ -38,7 +38,7 @@ const Seguridad = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/seguridad/seguridad-banner.png"
+                src="../images/seguridad/seguridad-banner.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />

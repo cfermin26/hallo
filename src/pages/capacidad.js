@@ -5,14 +5,13 @@ import Helmet from "react-helmet";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 
-const Soporte = () => {
+const Capacidad = () => {
   return (
     <Layout>
       <main>
         <Helmet>
-          <title>Soporte</title>
+          <title>Capacidad</title>
           <meta
             name="keywords"
             content="hallo, internet, planes, velocidad, experiencia, distribuidores, ecuador"
@@ -35,16 +34,29 @@ const Soporte = () => {
             calidad alemán."
           />
         </Helmet>
-        <Container fluid>
+        <Container fluid className="background">
           <Row>
-            <Col md={12} className="px-0 d-flex justify-content-center">
-              <Card className="bg-dark text-white rounded-0 border-0">
-                <StaticImage
-                  src="../images/home/hallo-banner.jpg"
-                  alt="Hallo banner"
-                  layout="fullWidth"
-                />
-              </Card>
+            <Col md={12} className="px-0">
+              <StaticImage
+                src="../images/contacto/contacto-banner.jpg"
+                alt="Hallo banner"
+                layout="fullWidth"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12} className="my-3 my-md-4">
+              <Container className="text-center page-cont py-1">
+                <Row className="my-4 my-md-5">
+                  <Col md={12}>
+                    <StaticImage
+                      src="../images/capacidad/hallo-capacidad.png"
+                      alt="Hallo banner"
+                      layout="fullWidth"
+                    />
+                  </Col>
+                </Row>
+              </Container>
             </Col>
           </Row>
         </Container>
@@ -53,4 +65,4 @@ const Soporte = () => {
   );
 };
 
-export default Soporte;
+export default Capacidad;

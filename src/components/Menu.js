@@ -3,8 +3,11 @@ import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import { StaticImage } from "gatsby-plugin-image";
+import Regulacion from "../docs/guia_control_parental_arcotel.pdf";
+import Abonados from "../docs/reglamento_abonados.pdf";
 
 const Menu = () => {
   return (
@@ -38,10 +41,33 @@ const Menu = () => {
             <Nav.Link as={Link} to="/quienes-somos" activeClassName="active">
               Quienes Somos
             </Nav.Link>
-            <Nav.Link as={Link} to="/soporte" activeClassName="active">
-              Soporte
-            </Nav.Link>
-            <Nav.Link as={Link} to="/distribuidores" activeClassName="active">
+            <NavDropdown title="Soporte">
+              <NavDropdown.Item href={Regulacion} target="_blank">
+                Control y regulación
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/preguntas-frecuentes">
+                Preguntas frecuentes
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/seguridad">
+                Seguridad
+              </NavDropdown.Item>
+              <NavDropdown.Item href={Abonados} target="_blank">
+                Reglamento abonados
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/capacidad">
+                Capacidad
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                href="https://www.arcotel.gob.ec/"
+                target="_blank"
+              >
+                ARCOTEL
+              </NavDropdown.Item>
+              <NavDropdown.Item href="https://fast.com/es" target="_blank">
+                Velocidad
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link as={Link} to="/franquiciados" activeClassName="active">
               Franquicias
             </Nav.Link>
             <Nav.Link as={Link} to="/universo-hallo" activeClassName="active">

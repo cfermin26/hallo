@@ -38,7 +38,7 @@ const QuienesSomos = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/quienes-somos/quienes-somos-banner.png"
+                src="../images/quienes-somos/quienes-somos-banner.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />

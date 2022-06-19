@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
+// import Iframe from "react-iframe";
 /* import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form"; */
 import ContactForm from "../components/ContactForm";
@@ -45,7 +46,7 @@ const IndexPage = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/home/hallo-banner.png"
+                src="../images/home/hallo-banner.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />
@@ -262,6 +263,21 @@ const IndexPage = () => {
 
           <Row>
             <Col md={12} className="px-0">
+              {/* <Iframe
+                url="https://hallo.createamec.com/"
+                position="absolute"
+                width="100%"
+                id="myId"
+                className="myClassname"
+                height="100%"
+                styles={{ height: "25px" }}
+              /> */}
+              {/* <iframe
+                src="https://hallo.createamec.com/"
+                width="100%"
+                height="100%"
+              ></iframe> */}
+
               <StaticImage
                 src="../images/home/hallo-mapa.png"
                 alt="Hallo mapa"

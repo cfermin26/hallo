@@ -38,7 +38,7 @@ const HalloTv = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/hallo-tv/hallo-tv-banner.png"
+                src="../images/hallo-tv/hallo-tv-banner.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />

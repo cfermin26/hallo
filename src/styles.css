@@ -127,7 +127,7 @@ body {
   text-decoration: none;
 }
 
-#basic-navbar-nav .nav-items a::after {
+#basic-navbar-nav .nav-items a::before {
   background: #ff810d;
   content: "";
   height: 2px;
@@ -139,7 +139,7 @@ body {
   width: 100%;
 }
 
-#basic-navbar-nav .nav-items a:hover::after {
+#basic-navbar-nav .nav-items a:hover::before {
   transform: scaleX(1);
 }
 

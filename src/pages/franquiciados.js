@@ -7,15 +7,15 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ContactForm from "../components/ContactForm";
 
-const Distribuidores = () => {
+const Franquiciados = () => {
   return (
     <Layout>
       <main>
         <Helmet>
-          <title>Distribuidores</title>
+          <title>Franquiciados</title>
           <meta
             name="keywords"
-            content="hallo, internet, planes, velocidad, experiencia, distribuidores, ecuador"
+            content="hallo, internet, planes, velocidad, experiencia, franquiciados, ecuador"
           />
           <meta
             name="description"
@@ -39,7 +39,7 @@ const Distribuidores = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/distribuidores/distribuidores-banner.png"
+                src="../images/franquiciados/franquiciados-banner.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />
@@ -127,4 +127,4 @@ const Distribuidores = () => {
   );
 };
 
-export default Distribuidores;
+export default Franquiciados;
