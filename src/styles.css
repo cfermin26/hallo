@@ -99,6 +99,19 @@ body {
   background-size: cover;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
+}
+
+.map-bg {
+  background-color: #ff810d;
+}
+
 .navbar-dark {
   background-color: #d2482b;
   color: #ffffff;
@@ -147,6 +160,23 @@ body {
   width: 90px;
 }
 
+/* .chatbot-logo {
+  width: 200px;
+} */
+
+.sticky-chat {
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+  transition: all 0.2s ease-out;
+  width: 180px;
+  z-index: 1050;
+}
+
+.sticky-chat:hover {
+  transform: scale(1.08);
+}
+
 .social-nav .nav-link {
   padding: 3px !important;
 }
@@ -159,6 +189,15 @@ body {
   color: #ff8010;
   font-family: "LemonMilk-Bold";
   font-size: 28px;
+}
+
+.agency-card-plan {
+  background-color: #ff8010;
+  color: #ffffff;
+  font-family: "LemonMilk-Bold";
+  font-size: 32px;
+  text-align: center;
+  max-width: 250px;
 }
 
 .text {
@@ -231,6 +270,32 @@ body {
   min-width: 140px;
 }
 
+.next-btn {
+  /* border-radius: 20px; */
+  font-size: 15px;
+  min-width: 90px;
+  background-color: #d2482b;
+  color: #ffffff;
+}
+
+.prev-btn {
+  /* border-radius: 20px; */
+  font-size: 15px;
+  min-width: 90px;
+  margin-right: 10px;
+}
+
+.number-btn {
+  background-color: #d6d6d6;
+  border-radius: 100%;
+  border: 0;
+  color: #ef870f;
+  font-family: "Raleway-Bold";
+  font-size: 21px;
+  width: 50px;
+  height: 50px;
+}
+
 .agency-list {
   font-family: "LemonMilk-Light";
   font-size: 26px;
@@ -258,6 +323,11 @@ body {
 .info-title {
   font-family: "Raleway-Bold";
   font-size: 32px;
+  text-align: center;
+}
+.info-title-plan {
+  font-family: "Raleway-Medium";
+  font-size: 26px;
   text-align: center;
 }
 
@@ -367,10 +437,42 @@ footer p {
   line-height: 1.1;
 }
 
+iframe {
+  height: 865px;
+}
+
+@media (max-width: 1199.98px) {
+  iframe {
+    height: 700px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  iframe {
+    height: 395px;
+  }
+}
+
 @media (max-width: 575.98px) {
+  iframe {
+    height: 295px;
+  }
+
   .social-nav {
     display: flex;
     flex-direction: row;
+  }
+
+  .sticky-chat {
+    bottom: 10px;
+    width: 120px;
+    right: 10px;
   }
   .title {
     font-size: 18px;
@@ -415,7 +517,8 @@ footer p {
 
   .plan-btn {
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 14px;
+    min-width: 90px;
   }
 
   .info-title {
@@ -492,8 +595,8 @@ footer p {
     margin-bottom: 9px;
     line-height: 1.1;
   }
+  .agency-card-plan {
+    font-size: 21px;
+    width: 180px;
+  }
 }
-
-/* @media (max-width: 991.98px) {
-
-} */

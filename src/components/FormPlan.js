@@ -6,26 +6,20 @@ import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-const ContactForm = () => {
+const FormPlan = ({ idealPlan }) => {
+  var plan = idealPlan;
   return (
     <div className="info-form mx-auto">
       <Container className="px-2">
         <Row>
           <Col md={12} className="mt-4 pt-2 mt-md-0">
+            <h2 className="info-title-plan">TU PLAN IDEAL RECOMENDADO</h2>
             <h2 className="info-title">
-              NECESITAS MÁS <span className="orange-text">INFORMACIÓN</span>
+              <h3 className="agency-card-plan p-2 p-md-3 mx-auto">
+                {plan} MEGAS
+              </h3>
             </h2>
-          </Col>
-        </Row>
-        <Row className="mt-2">
-          <Col xs={4} md={6} className="pe-0">
-            <h4 className="write-us-title">Escríbenos</h4>
-          </Col>
-          <Col xs={8} md={6} className="ps-0">
-            <h4 className="call-us-title">
-              <span className="orange-text">Llámanos Celular:</span> 098 252
-              2222
-            </h4>
+            <h2 className="info-title-plan">ACTIVA TU PAQUETE</h2>
           </Col>
         </Row>
         <Row className="mt-2">
@@ -43,36 +37,13 @@ const ContactForm = () => {
               <Form.Control type="text" placeholder="Cédula" required />
             </FloatingLabel>
             <FloatingLabel label="Agencia" className="mb-2">
-              <Form.Select required>
-                <option value="">Seleccione</option>
+              <Form.Select disabled>
                 <option value="Azuay - Cuenca">Azuay - Cuenca</option>
-                <option value="Bolivar - Las Naves">Bolivar - Las Naves</option>
-                <option value="Cañar - La Troncal">Cañar - La Troncal</option>
-                <option value="Loja - Loja">Loja - Loja</option>
-                <option value="Los Ríos - Quinsaloma">
-                  Los Ríos - Quinsaloma
-                </option>
-                <option value="Pichincha - Quito">Pichincha - Quito</option>
-                <option value="Santa Elena - La Libertad">
-                  Santa Elena - La Libertad
-                </option>
-                <option value="Zamora Chinchipe - Yantzaza">
-                  Zamora Chinchipe - Yantzaza
-                </option>
-                <option value="Zamora Chinchipe - Zamora">
-                  Zamora Chinchipe - Zamora
-                </option>
               </Form.Select>
             </FloatingLabel>
             <FloatingLabel label="Asunto" className="mb-2">
-              <Form.Select>
-                <option>Seleccione</option>
-                <option value="Facturación">Facturación</option>
-                <option value="Pagos">Pagos</option>
+              <Form.Select disabled>
                 <option value="Planes">Planes</option>
-                <option value="Problemas con el servicio">
-                  Problemas con el servicio
-                </option>
               </Form.Select>
             </FloatingLabel>
             <FloatingLabel label="Mensaje" className="mb-2">
@@ -96,4 +67,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default FormPlan;

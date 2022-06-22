@@ -1,17 +1,28 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import ContactForm from "../components/ContactForm";
+import IdealPlan from "../components/IdealPlan";
 import Helmet from "react-helmet";
 import Layout from "../components/Layout";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+// import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
+import Mapa from "../components/Mapa";
 // import Iframe from "react-iframe";
 /* import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form"; */
-import ContactForm from "../components/ContactForm";
+
+SwiperCore.use([Autoplay]);
+SwiperCore.use([Navigation]);
+SwiperCore.use([Pagination]);
 
 const IndexPage = () => {
   return (
@@ -45,11 +56,29 @@ const IndexPage = () => {
         <Container fluid className="background">
           <Row>
             <Col md={12} className="px-0">
-              <StaticImage
-                src="../images/home/hallo-banner.jpg"
-                alt="Hallo banner"
-                layout="fullWidth"
-              />
+              <Swiper
+                navigation={true}
+                // autoplay={true}
+                pagination={{ clickable: true }}
+                modules={[Navigation]}
+                slidesPerView={1}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <StaticImage
+                    src="../images/home/hallo-banner.jpg"
+                    alt="Hallo banner"
+                    layout="fullWidth"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <StaticImage
+                    src="../images/home/hallo-banner-2.jpg"
+                    alt="Hallo banner"
+                    layout="fullWidth"
+                  />
+                </SwiperSlide>
+              </Swiper>
             </Col>
           </Row>
           <Row>
@@ -65,7 +94,7 @@ const IndexPage = () => {
               <h2 className="welcome-title mt-4 mt-md-0">Bienvenido a</h2>
               <h1 className="welcome-subtitle">
                 LA CONEXIÓN MÁS <br />
-                <span className="raleway-bold">RÁPIDA</span>
+                <span className="raleway-bold">RÁPIDA </span>
                 DEL PAÍS
               </h1>
               <p className="welcome-text px-2 px-md-0 mx-auto mt-3">
@@ -79,42 +108,7 @@ const IndexPage = () => {
 
           <Row className="mb-4 mb-md-5 mt-3 mt-md-0">
             <Col md={12}>
-              <div className="plan-card shadow mx-auto px-4 px-md-5 py-3 py-md-4">
-                <Container>
-                  <Row>
-                    <Col md={12}>
-                      <h3 className="plan-title">
-                        Elige tu <span className="orange-text">PLAN IDEAL</span>
-                      </h3>
-                      <h4 className="plan-subtitle">
-                        <span className="orange-text">¿</span>NECESITAS CONEXION
-                        A INTERNET PARA{" "}
-                        <span className="orange-text">HOGAR O NEGOCIO?</span>
-                      </h4>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col xs={12}>
-                      <StaticImage
-                        src="../images/home/hallo-planes.png"
-                        alt="Hallo planes"
-                      />
-                    </Col>
-                  </Row>
-                  <Row className="mt-2 mb-2">
-                    <Col xs={6} className="text-center">
-                      <Button variant="secondary" className="ms-md-5 plan-btn">
-                        HOGAR
-                      </Button>
-                    </Col>
-                    <Col xs={6} className="text-center">
-                      <Button variant="secondary" className="me-md-5 plan-btn">
-                        NEGOCIO
-                      </Button>
-                    </Col>
-                  </Row>
-                </Container>
-              </div>
+              <IdealPlan />
             </Col>
           </Row>
 
@@ -261,28 +255,17 @@ const IndexPage = () => {
             </Col>
           </Row>
 
-          <Row>
+          <Row className="map-bg py-3 py-md-5">
             <Col md={12} className="px-0">
-              {/* <Iframe
-                url="https://hallo.createamec.com/"
-                position="absolute"
-                width="100%"
-                id="myId"
-                className="myClassname"
-                height="100%"
-                styles={{ height: "25px" }}
-              /> */}
-              {/* <iframe
-                src="https://hallo.createamec.com/"
-                width="100%"
-                height="100%"
-              ></iframe> */}
-
-              <StaticImage
+              <h2 className="title mb-md-4 pb-md-3 text-light text-center">
+                NUESTRA COBERTURA
+              </h2>
+              <Mapa />
+              {/* <StaticImage
                 src="../images/home/hallo-mapa.png"
                 alt="Hallo mapa"
                 layout="fullWidth"
-              />
+              /> */}
             </Col>
           </Row>
         </Container>

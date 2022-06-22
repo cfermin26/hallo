@@ -51,7 +51,11 @@ const Menu = () => {
               <NavDropdown.Item as={Link} to="/seguridad">
                 Seguridad
               </NavDropdown.Item>
-              <NavDropdown.Item href={Abonados} target="_blank">
+              <NavDropdown.Item
+                href={Abonados}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Reglamento abonados
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/capacidad">
@@ -60,10 +64,15 @@ const Menu = () => {
               <NavDropdown.Item
                 href="https://www.arcotel.gob.ec/"
                 target="_blank"
+                rel="noreferrer"
               >
                 ARCOTEL
               </NavDropdown.Item>
-              <NavDropdown.Item href="https://fast.com/es" target="_blank">
+              <NavDropdown.Item
+                href="https://fast.com/es"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Velocidad
               </NavDropdown.Item>
             </NavDropdown>
@@ -81,6 +90,7 @@ const Menu = () => {
             <Nav.Link
               href="https://www.facebook.com/hallo.network/"
               target="_blank"
+              rel="noreferrer"
             >
               <StaticImage
                 src="../images/assets/facebook.svg"

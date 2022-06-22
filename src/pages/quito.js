@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState } from "react";
+import ModalPlan from "../components/ModalPlan";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
@@ -7,6 +8,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Quito = () => {
+  const [nombre, setNombre] = useState("");
+  const [megas, setMegas] = useState("");
+  const [precio, setPrecio] = useState("");
+  const [show, setShow] = useState(false);
+
+  const openModal = (e, plan, megas, precio) => {
+    setNombre(plan);
+    setMegas(megas);
+    setPrecio(precio);
+    setShow(true);
+  };
+
   return (
     <Layout>
       <main>
@@ -71,14 +84,28 @@ const Quito = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "BASIC", "45", "$19.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/quito/planes/quito-plan-basic.png"
                               alt="Hallo plan basic"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "HOUSE", "65", "$23.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/quito/planes/quito-plan-house.png"
                               alt="Hallo plan house"
@@ -101,17 +128,29 @@ const Quito = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) => openModal(e, "PRO", "80", "$29.50")}
+                          >
                             <StaticImage
                               src="../images/agencias/quito/planes/quito-plan-pro.png"
-                              alt="Hallo plan basic"
+                              alt="Hallo plan pro"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "GAMER", "100", "$32.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/quito/planes/quito-plan-gamer.png"
-                              alt="Hallo plan house"
+                              alt="Hallo plan gamer"
                               layout="fullWidth"
                             />
                           </Col>
@@ -131,17 +170,31 @@ const Quito = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4 mx-auto">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4 mx-auto"
+                            onClick={(e) =>
+                              openModal(e, "PLATINUM", "160", "$45.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/quito/planes/quito-plan-platinum.png"
-                              alt="Hallo plan house"
+                              alt="Hallo plan platinum"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "INFINITY", "200", "$57.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/quito/planes/quito-plan-infinity.png"
-                              alt="Hallo plan house"
+                              alt="Hallo plan infinity"
                               layout="fullWidth"
                             />
                           </Col>
@@ -154,6 +207,15 @@ const Quito = () => {
             </Col>
           </Row>
         </Container>
+        <ModalPlan
+          planAgencia={"Pichincha - Quito"}
+          planEmail={"crferminr@gmail.com"}
+          planNombre={nombre}
+          planMegas={megas}
+          planPrecio={precio}
+          setShow={setShow}
+          show={show}
+        />
       </main>
     </Layout>
   );

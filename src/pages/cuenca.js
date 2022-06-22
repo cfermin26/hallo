@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState } from "react";
+import ModalPlan from "../components/ModalPlan";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
@@ -6,7 +7,20 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+
 const Cuenca = () => {
+  const [nombre, setNombre] = useState("");
+  const [megas, setMegas] = useState("");
+  const [precio, setPrecio] = useState("");
+  const [show, setShow] = useState(false);
+
+  const openModal = (e, plan, megas, precio) => {
+    setNombre(plan);
+    setMegas(megas);
+    setPrecio(precio);
+    setShow(true);
+  };
+
   return (
     <Layout>
       <main>
@@ -71,14 +85,28 @@ const Cuenca = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "BASIC", "45", "$19.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/cuenca/planes/cuenca-plan-basic.png"
                               alt="Hallo plan basic"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "HOUSE", "80", "$23.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/cuenca/planes/cuenca-plan-house.png"
                               alt="Hallo plan house"
@@ -101,17 +129,31 @@ const Cuenca = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "PRO", "100", "$29.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/cuenca/planes/cuenca-plan-pro.png"
-                              alt="Hallo plan basic"
+                              alt="Hallo plan pro"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "GAMER", "160", "$40.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/cuenca/planes/cuenca-plan-gamer.png"
-                              alt="Hallo plan house"
+                              alt="Hallo plan gamer"
                               layout="fullWidth"
                             />
                           </Col>
@@ -131,17 +173,33 @@ const Cuenca = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "PLATINUM", "250", "$56.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/cuenca/planes/cuenca-plan-platinum.png"
-                              alt="Hallo plan basic"
+                              alt="Hallo plan platinum"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            // onClick={openModal}
+                            // onClick={(e) => this.openModal(nombre, e)}
+                            onClick={(e) =>
+                              openModal(e, "INFINITY", "300", "$72.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/cuenca/planes/cuenca-plan-infinity.png"
-                              alt="Hallo plan house"
+                              alt="Hallo plan infinity"
                               layout="fullWidth"
                             />
                           </Col>
@@ -154,6 +212,15 @@ const Cuenca = () => {
             </Col>
           </Row>
         </Container>
+        <ModalPlan
+          planAgencia={"Azuay - Cuenca"}
+          planEmail={"crferminr@gmail.com"}
+          planNombre={nombre}
+          planMegas={megas}
+          planPrecio={precio}
+          setShow={setShow}
+          show={show}
+        />
       </main>
     </Layout>
   );

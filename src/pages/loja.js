@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState } from "react";
+import ModalPlan from "../components/ModalPlan";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
@@ -7,6 +8,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Loja = () => {
+  const [nombre, setNombre] = useState("");
+  const [megas, setMegas] = useState("");
+  const [precio, setPrecio] = useState("");
+  const [show, setShow] = useState(false);
+
+  const openModal = (e, plan, megas, precio) => {
+    setNombre(plan);
+    setMegas(megas);
+    setPrecio(precio);
+    setShow(true);
+  };
+
   return (
     <Layout>
       <main>
@@ -71,14 +84,28 @@ const Loja = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "BASIC", "50", "$19.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/loja/planes/loja-plan-basic.png"
                               alt="Hallo plan basic"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "HOUSE", "75", "$23.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/loja/planes/loja-plan-house.png"
                               alt="Hallo plan house"
@@ -101,17 +128,31 @@ const Loja = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "PRO", "100", "$30.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/loja/planes/loja-plan-pro.png"
-                              alt="Hallo plan basic"
+                              alt="Hallo plan pro"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col xs={6} md={6} className="px-md-4">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4"
+                            onClick={(e) =>
+                              openModal(e, "GAMER", "200", "$60.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/loja/planes/loja-plan-gamer.png"
-                              alt="Hallo plan house"
+                              alt="Hallo plan gamer"
                               layout="fullWidth"
                             />
                           </Col>
@@ -131,10 +172,17 @@ const Loja = () => {
                     <div className="agency-card p-4 p-md-5">
                       <Container className="px-0">
                         <Row>
-                          <Col xs={6} md={6} className="px-md-4 mx-auto">
+                          <Col
+                            xs={6}
+                            md={6}
+                            className="px-md-4 mx-auto"
+                            onClick={(e) =>
+                              openModal(e, "PLATINUM", "300", "$90.50")
+                            }
+                          >
                             <StaticImage
                               src="../images/agencias/loja/planes/loja-plan-platinum.png"
-                              alt="Hallo plan basic"
+                              alt="Hallo plan platinum"
                               layout="fullWidth"
                             />
                           </Col>
@@ -147,6 +195,15 @@ const Loja = () => {
             </Col>
           </Row>
         </Container>
+        <ModalPlan
+          planAgencia={"Loja - Loja"}
+          planEmail={"crferminr@gmail.com"}
+          planNombre={nombre}
+          planMegas={megas}
+          planPrecio={precio}
+          setShow={setShow}
+          show={show}
+        />
       </main>
     </Layout>
   );
