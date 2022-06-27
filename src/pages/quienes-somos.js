@@ -50,11 +50,11 @@ const QuienesSomos = () => {
                 <Row className="my-4 my-md-5">
                   <Col md={12}>
                     <p className="text">
-                      hallo (hola traducción en alemán), es una marca creada
+                      HALLO (hola traducción en alemán), es una marca creada
                       como imagen para la provisión del servicio de acceso a
                       internet en el ecuador, que opera bajo los estándares de
                       calidad alemán, cuya propiedad y creación le pertenece a
-                      la compañía muvecom c.l., pudiendo cualquier persona
+                      la compañía MUVECOM C.L., pudiendo cualquier persona
                       natural o jurídica ser distribuidor autorizado de la
                       marca, la cual será beneficiaria de todos los derechos que
                       le otorgue dicha distribución dentro de la circunscripción
@@ -62,66 +62,66 @@ const QuienesSomos = () => {
                     </p>
                     <h2 className="title mt-4 mt-md-4 pt-md-3">MISIÓN</h2>
                     <p className="text">
-                      satisfacer la demanda del servicio de internet en el
+                      Satisfacer la demanda del servicio de internet en el
                       ecuador, mediante un servicio diferenciado, mejorado y
                       superior al del prestador tradicional, con una
-                      compartición 2:1 a través de una red de fibra óptica,
-                      brindando una asesoría efectiva en la instalación del
-                      servicio de internet a nuestros clientes finales, dando un
-                      valor agregado al servicio de internet al que estábamos
-                      acostumbrados, con equipos de última tecnología, que
-                      permitirá al cliente final navegar con un número ilimitado
-                      de dispositivos en su hogar.
+                      compartición 2:1 y 1:1 a través de una red de fibra
+                      óptica, brindando una asesoría efectiva en la instalación
+                      del servicio de internet a nuestros clientes finales,
+                      dando un valor agregado al servicio de internet al que
+                      estábamos acostumbrados, con equipos de última tecnología,
+                      que permitirá al cliente final navegar con un número
+                      ilimitado de dispositivos en su hogar.
                     </p>
                     <h2 className="title mt-4 mt-md-4 pt-md-3">VISIÓN</h2>
                     <p className="text">
-                      constituirnos en el prestador de servicio de internet más
+                      Constituirnos en el prestador de servicio de internet más
                       reconocido a nivel nacional, con una red de fibra óptica
                       robusta que permita conectarse a nuestros usuarios con el
-                      mundo digital de las tic’s. políticas dentro de nuestra
+                      mundo digital de las TIC’S. políticas dentro de nuestra
                       organización conceptualizamos la calidad del servicio como
                       nuestra principal hoja de presentación para con nuestros
                       clientes y potenciales usuarios. buscamos que, a través de
                       la prestación de un servicio de calidad, no solo tengamos
                       clientes sino estos se vuelvan fans de nuestra marca,
-                      fidelizándolos y haciéndolos de nuestra familia hallo.
+                      fidelizándolos y haciéndolos de nuestra familia HALLO.
                       nuestra red de distribución del servicio de internet,
                       cuenta con equipamiento de última tecnología, cumpliendo
                       los más exigentes estándares de calidad, asegurando al
                       cliente una experiencia única, mediante una compartición
-                      2:1 y velocidades simétricas. la igualdad, la rectitud y
-                      la transparencia serán las guías de nuestra actuación como
-                      prestadores del servicio de internet, teniendo siempre
-                      como objetivo final el bien común de todos los
-                      involucrados en la prestación del servicio, sin excepción
-                      ni exclusión de ninguna naturaleza. nuestra calidad moral
-                      nos permitirá tomar decisiones oportunas que permitirán
-                      mejorar continuamente la prestación del servicio.
-                      capacitar permanente a nuestro personal, a fin de brindar
-                      una atención al cliente especializada, efectiva y
-                      oportuna.
+                      2:1 y 1:1 y velocidades simétricas. la igualdad, la
+                      rectitud y la transparencia serán las guías de nuestra
+                      actuación como prestadores del servicio de internet,
+                      teniendo siempre como objetivo final el bien común de
+                      todos los involucrados en la prestación del servicio, sin
+                      excepción ni exclusión de ninguna naturaleza. nuestra
+                      calidad moral nos permitirá tomar decisiones oportunas que
+                      permitirán mejorar continuamente la prestación del
+                      servicio. capacitar permanente a nuestro personal, a fin
+                      de brindar una atención al cliente especializada, efectiva
+                      y oportuna.
                     </p>
                     <h2 className="title mt-4 mt-md-4 pt-md-3">POLÍTICAS</h2>
                     <p className="text">
-                      dentro de nuestra organización conceptualizamos la calidad
+                      Dentro de nuestra organización conceptualizamos la calidad
                       del servicio como nuestra principal hoja de presentación
                       para con los clientes y potenciales usuarios de hallo.
                     </p>
                     <p className="text">
-                      buscamos que, a través de la prestación de un servicio de
+                      Buscamos que, a través de la prestación de un servicio de
                       calidad, no solo tengamos clientes sino estos se vuelvan
                       fans de nuestra marca, fidelizándolos y haciéndolos parte
                       de nuestra familia hallo.
                     </p>
                     <p className="text">
-                      nuestra red de distribución del servicio de internet,
+                      Nuestra red de distribución del servicio de internet,
                       cuenta con equipamiento de última tecnología, cumpliendo
                       los más exigentes estándares de calidad, asegurando al
                       cliente una experiencia única, mediante una compartición
                       1:1 y 2:1 y velocidades simétricas.
                     </p>
                     <p className="text">
-                      la igualdad, la rectitud y la transparencia serán las
+                      La igualdad, la rectitud y la transparencia serán las
                       guías de nuestra actuación como prestadores del servicio
                       de internet y representantes de la marca hallo en ecuador,
                       teniendo siempre como objetivo final el bien común de
@@ -129,17 +129,17 @@ const QuienesSomos = () => {
                       excepción ni exclusión de ninguna naturaleza.
                     </p>
                     <p className="text">
-                      nuestra calidad moral nos permitirá tomar decisiones
+                      Nuestra calidad moral nos permitirá tomar decisiones
                       oportunas que permitirán mejorar continuamente la
                       prestación del servicio.
                     </p>
                     <p className="text">
-                      capacitar permanente a nuestro personal, a fin de brindar
+                      Capacitar permanente a nuestro personal, a fin de brindar
                       una atención al cliente especializada, efectiva y
                       oportuna.
                     </p>
                     <p className="text">
-                      en fin hallo significa calidad, estabilidad, velocidad,
+                      En fin HALLO significa calidad, estabilidad, velocidad,
                       tecnología, servicio, y, eficiencia, para nuestros
                       usuarios finales, y, sobre todo confianza para los
                       inversionistas.

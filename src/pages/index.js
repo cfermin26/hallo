@@ -257,7 +257,7 @@ const IndexPage = () => {
 
           <Row className="map-bg py-3 py-md-5">
             <Col md={12} className="px-0">
-              <h2 className="title mb-md-4 pb-md-3 text-light text-center">
+              <h2 className="title mb-md-4 pb-md-3 orange-text text-center">
                 NUESTRA COBERTURA
               </h2>
               <Mapa />

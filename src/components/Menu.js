@@ -105,13 +105,7 @@ const Menu = () => {
                 className="social-logo"
               />
             </Nav.Link>
-            <Nav.Link href="" target="_blank">
-              <StaticImage
-                src="../images/assets/twitter.svg"
-                alt="twitter logo"
-                className="social-logo"
-              />
-            </Nav.Link>
+
             <Nav.Link href="" target="_blank">
               <StaticImage
                 src="../images/assets/tiktok.svg"

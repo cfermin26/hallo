@@ -50,29 +50,29 @@ const Franquiciados = () => {
               <Container className="text-center page-cont py-1 px-3">
                 <Row className="mt-3 mt-md-4">
                   <Col md={12}>
-                    <h2 className="title mt-2 ">DISTRIBUIDORES</h2>
+                    <h2 className="title mt-2 ">FRANQUICIAS</h2>
                     <p className="text">
                       HALLO (hola traducción en alemán), es una marca creada
                       como imagen para la provisión del servicio de acceso a
                       internet en el Ecuador, que opera bajo los estándares de
                       calidad alemán, cuya propiedad y creación le pertenece a
                       la compañía MUVECOM C.L., pudiendo cualquier persona
-                      natural o jurídica ser distribuidor autorizado de la
+                      natural o jurídica ser franquiciado autorizado de la
                       marca, la cual será beneficiaria de todos los derechos que
-                      le otorgue dicha distribución dentro de la circunscripción
+                      le otorgue dicha franquicia dentro de la circunscripción
                       territorial autorizada.
                     </p>
                     <p className="text">
-                      La distribución concederá al distribuidor autorizado el
+                      La franquicia concederá al franquiciado autorizado el
                       derecho y exclusividad a utilizar el nombre comercial y la
-                      marca HALLO, teniendo el distribuidor acceso a los
+                      marca HALLO, teniendo el franquiciado acceso a los
                       siguientes beneficios:
                     </p>
                     <p className="text">
                       Manual de marca, de aplicaciones, de soporte técnico, de
                       instalación. Exclusividad de marca y nombre comercial en
                       una circunscripción territorial específica. Identificación
-                      de la agencia del distribuidor en la Página Web principal
+                      de la agencia del franquiciado en la Página Web principal
                       de HALLO www.hallo.ec
                     </p>
                     <p className="text">
