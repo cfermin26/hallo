@@ -1785,7 +1785,11 @@ const IdealPlan = () => {
               <FloatingLabel label="Agencia" className="mb-2">
                 <Form.Select
                   required
-                  onChange={(e) => setHouseAgency(e.target.value)}
+                  onChange={(e) => {
+                    setHouseAgency(e.target.value);
+                    StepCincoCasa();
+                  }}
+                  /* onChange={(e) => setHouseAgency(e.target.value)} */
                 >
                   <option value="">Seleccione</option>
                   <option value="1">Azuay - Cuenca</option>
@@ -1809,9 +1813,9 @@ const IdealPlan = () => {
               >
                 Anterior
               </Button>
-              <Button variant="danger next-btn" onClick={() => StepCincoCasa()}>
+              {/* <Button variant="danger next-btn" onClick={() => StepCincoCasa()}>
                 Siguiente
-              </Button>
+              </Button> */}
             </Col>
           </Row>
         </Container>
@@ -1831,7 +1835,11 @@ const IdealPlan = () => {
               <FloatingLabel label="Agencia" className="mb-2">
                 <Form.Select
                   required
-                  onChange={(e) => setBusinessAgency(e.target.value)}
+                  onChange={(e) => {
+                    setBusinessAgency(e.target.value);
+                    StepCincoNegocio();
+                  }}
+                  /* onChange={(e) => setBusinessAgency(e.target.value)} */
                 >
                   <option value="">Seleccione</option>
                   <option value="1">Azuay - Cuenca</option>
@@ -1856,12 +1864,12 @@ const IdealPlan = () => {
                 Anterior
               </Button>
 
-              <Button
+              {/* <Button
                 variant="danger next-btn"
                 onClick={() => StepCincoNegocio()}
               >
                 Siguiente
-              </Button>
+              </Button> */}
             </Col>
           </Row>
         </Container>
