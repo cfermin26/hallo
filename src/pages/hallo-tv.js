@@ -85,14 +85,14 @@ const HalloTv = () => {
                     </p>
                   </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                   <Col md={12} className="px-0">
                     <StaticImage
                       src="../images/hallo-tv/hallo-tv-canales.png"
                       alt="Hallo TV canales"
                     />
                   </Col>
-                </Row>
+                </Row> */}
               </Container>
             </Col>
           </Row>

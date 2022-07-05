@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-const ContactForm = () => {
+const PlanForm = ({ type, size, number, agency, idealPlan }) => {
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -27,15 +27,61 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [celular, setCelular] = useState("");
   const [cedula, setCedula] = useState("");
-  const [agencia, setAgencia] = useState("");
-  const [asunto, setAsunto] = useState("");
+  const [asunto, setAsunto] = useState("Planes");
   const [mensaje, setMensaje] = useState("");
-  const [destinatario, setDestinatario] = useState("");
 
-  const leerAgencia = (e) => {
-    setDestinatario(e.target.value);
-    setAgencia(e.target.options[e.target.selectedIndex].text);
-  };
+  var tipo = type;
+  var numero = number;
+  var agencia = agency;
+  var megas = idealPlan;
+  var destinatario;
+  var nombreAgencia;
+  var tamano;
+
+  if (agencia === "1") {
+    destinatario = "ventas.cuenca@hallo.ec";
+    nombreAgencia = "Azuay - Cuenca";
+  } else if (agencia === "2") {
+    destinatario = "ventas.pucara@hallo.ec";
+    nombreAgencia = "Azuay - Pucara";
+  } else if (agencia === "3") {
+    destinatario = "ventas.lasnaves@hallo.ec";
+    nombreAgencia = "Bolivar - Las Naves";
+  } else if (agencia === "4") {
+    destinatario = "ventas.latroncal@hallo.ec";
+    nombreAgencia = "Cañar - La Troncal";
+  } else if (agencia === "5") {
+    destinatario = "ventas.loja@hallo.ec";
+    nombreAgencia = "Loja - Loja";
+  } else if (agencia === "6") {
+    destinatario = "ventas.quinsaloma@hallo.ec";
+    nombreAgencia = "Los Ríos - Quinsaloma";
+  } else if (agencia === "7") {
+    destinatario = "ventas.quito@hallo.ec";
+    nombreAgencia = "Pichincha - Quito";
+  } else if (agencia === "8") {
+    destinatario = "ventas.lalibertad@hallo.ec";
+    nombreAgencia = "Santa Elena - La Libertad";
+  } else if (agencia === "9") {
+    destinatario = "ventas.yantzaza@hallo.ec";
+    nombreAgencia = "Zamora Chinchipe - Yantzaza";
+  }
+
+  if (size === "1") {
+    tamano = "Pequeño";
+  } else if (size === "2") {
+    tamano = "Mediano";
+  } else if (size === "3") {
+    tamano = "Grande";
+  }
+
+  /* console.log("tipo: " + tipo);
+  console.log("tamaño: " + tamano);
+  console.log("numero: " + numero);
+  console.log("agencia:" + agencia);
+  console.log("plan:" + plan);
+  console.log("destinatario:" + destinatario);
+  console.log("agencia: " + nombreAgencia); */
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,12 +91,16 @@ const ContactForm = () => {
     dataForm.append("email", email);
     dataForm.append("celular", celular);
     dataForm.append("cedula", cedula);
-    dataForm.append("agencia", agencia);
+    dataForm.append("agencia", nombreAgencia);
     dataForm.append("asunto", asunto);
+    dataForm.append("tipo", tipo);
+    dataForm.append("tamano", tamano);
+    dataForm.append("numero", numero);
+    dataForm.append("megas", megas);
     dataForm.append("mensaje", mensaje);
     dataForm.append("destinatario", destinatario);
     const respuesta = await axios.post(
-      "https://backweb.hallo.ec/api/contacto",
+      "https://backweb.hallo.ec/api/plan",
       dataForm
     );
     if (respuesta.status === 200) {
@@ -59,10 +109,10 @@ const ContactForm = () => {
         setEmail("");
         setCelular("");
         setCedula("");
-        setAgencia("");
         setAsunto("");
         setMensaje("");
         e.target.reset();
+        window.location.replace("https://hallo.ec");
         setActiveSpinner(false);
         Toast.fire({
           icon: "success",
@@ -84,28 +134,19 @@ const ContactForm = () => {
     }
   };
 
-  /* console.log(agencia);
-  console.log(destinatario); */
   return (
     <div className="info-form mx-auto">
       <Form className="contact-form mx-auto py-4" onSubmit={handleSubmit}>
         <Container className="px-2">
           <Row>
             <Col md={12} className="mt-4 pt-2 mt-md-0">
+              <h2 className="info-title-plan">TU PLAN IDEAL RECOMENDADO</h2>
               <h2 className="info-title">
-                NECESITAS MÁS <span className="orange-text">INFORMACIÓN</span>
+                <h3 className="agency-card-plan p-2 p-md-3 mx-auto">
+                  {megas} MEGAS
+                </h3>
               </h2>
-            </Col>
-          </Row>
-          <Row className="mt-2">
-            <Col xs={4} md={6} className="pe-0">
-              <h4 className="write-us-title">Escríbenos</h4>
-            </Col>
-            <Col xs={8} md={6} className="ps-0">
-              <h4 className="call-us-title">
-                <span className="orange-text">Llámanos Celular:</span> 098 252
-                2222
-              </h4>
+              <h2 className="info-title-plan">ACTIVA TU PAQUETE</h2>
             </Col>
           </Row>
           <Row className="mt-2">
@@ -143,48 +184,13 @@ const ContactForm = () => {
                 />
               </FloatingLabel>
               <FloatingLabel label="Agencia" className="mb-2">
-                <Form.Select required onChange={leerAgencia}>
-                  <option value="">Seleccione</option>
-                  <option value="ventas.yantzaza@hallo.ec">
-                    Azuay - Cuenca
-                  </option>
-                  <option value="ventas.pucara@hallo.ec">Azuay - Pucara</option>
-                  <option value="ventas.lasnaves@hallo.ec">
-                    Bolivar - Las Naves
-                  </option>
-                  <option value="ventas.latroncal@hallo.ec">
-                    Cañar - La Troncal
-                  </option>
-                  <option value="ventas.loja@hallo.ec">Loja - Loja</option>
-                  <option value="ventas.quinsaloma@hallo.ec">
-                    Los Ríos - Quinsaloma
-                  </option>
-                  <option value="ventas.quito@hallo.ec">
-                    Pichincha - Quito
-                  </option>
-                  <option value="ventas.lalibertad@hallo.ec">
-                    Santa Elena - La Libertad
-                  </option>
-                  <option value="ventas.yantzaza@hallo.ec">
-                    Zamora Chinchipe - Yantzaza
-                  </option>
-                  <option value="ventas.yantzaza@hallo.ec">
-                    Zamora Chinchipe - Zamora
-                  </option>
+                <Form.Select disabled>
+                  <option value={nombreAgencia}>{nombreAgencia}</option>
                 </Form.Select>
               </FloatingLabel>
               <FloatingLabel label="Asunto" className="mb-2">
-                <Form.Select
-                  required
-                  onChange={(e) => setAsunto(e.target.value)}
-                >
-                  <option value="">Seleccione</option>
-                  <option value="Facturación">Facturación</option>
-                  <option value="Pagos">Pagos</option>
+                <Form.Select disabled>
                   <option value="Planes">Planes</option>
-                  <option value="Problemas con el servicio">
-                    Problemas con el servicio
-                  </option>
                 </Form.Select>
               </FloatingLabel>
               <FloatingLabel label="Mensaje" className="mb-2">
@@ -213,6 +219,11 @@ const ContactForm = () => {
               Enviar
             </Button> */}
             </Col>
+            {/* <Col md={12} className="text-center mb-4 mb-md-0">
+            <Button variant="light" className="send-btn px-4">
+              Enviar
+            </Button>
+          </Col> */}
           </Row>
         </Container>
       </Form>
@@ -220,4 +231,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default PlanForm;

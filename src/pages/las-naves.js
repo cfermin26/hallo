@@ -195,7 +195,7 @@ const LasNaves = () => {
         </Container>
         <ModalPlan
           planAgencia={"Bolívar - Las Naves"}
-          planEmail={"crferminr@gmail.com"}
+          planEmail={"ventas.lasnaves@hallo.ec"}
           planNombre={nombre}
           planMegas={megas}
           planPrecio={precio}

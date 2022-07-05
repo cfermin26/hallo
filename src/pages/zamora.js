@@ -209,7 +209,7 @@ const Zamora = () => {
         </Container>
         <ModalPlan
           planAgencia={"Zamora Chinchipe - Zamora"}
-          planEmail={"crferminr@gmail.com"}
+          planEmail={"ventas.yantzaza@hallo.ec"}
           planNombre={nombre}
           planMegas={megas}
           planPrecio={precio}

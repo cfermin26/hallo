@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import FormPlan from "./FormPlan";
+import PlanForm from "./PlanForm";
 // import { useEffect } from "react";
 
 const IdealPlan = () => {
@@ -1378,10 +1378,10 @@ const IdealPlan = () => {
   console.log("Casa agencia: " + houseAgency);
   console.log("Casa Plan: " + housePlan);
 
-  console.log("Negocio tamaño: " + businessSize);
+  /* console.log("Negocio tamaño: " + businessSize);
   console.log("Negocio número: " + businessNumber);
   console.log("Negocio agencia: " + businessAgency);
-  console.log("Negocio plan: " + businessPlan);
+  console.log("Negocio plan: " + businessPlan); */
   // console.log(housePlan);
 
   // useEffect(() => {
@@ -1879,7 +1879,13 @@ const IdealPlan = () => {
         <Container>
           <Row>
             <Col md={12}>
-              <FormPlan idealPlan={housePlan} />
+              <PlanForm
+                type={"Casa"}
+                size={houseSize}
+                number={houseNumber}
+                agency={houseAgency}
+                idealPlan={housePlan}
+              />
             </Col>
           </Row>
           <Row className="mt-4">
@@ -1899,7 +1905,13 @@ const IdealPlan = () => {
         <Container>
           <Row>
             <Col md={12}>
-              <FormPlan idealPlan={businessPlan} />
+              <PlanForm
+                type={"Negocio"}
+                size={businessSize}
+                number={businessNumber}
+                agency={businessAgency}
+                idealPlan={businessPlan}
+              />
             </Col>
           </Row>
           <Row className="mt-4">

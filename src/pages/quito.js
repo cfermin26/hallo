@@ -209,7 +209,7 @@ const Quito = () => {
         </Container>
         <ModalPlan
           planAgencia={"Pichincha - Quito"}
-          planEmail={"crferminr@gmail.com"}
+          planEmail={"ventas.quito@hallo.ec"}
           planNombre={nombre}
           planMegas={megas}
           planPrecio={precio}

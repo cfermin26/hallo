@@ -7,7 +7,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-
 const Cuenca = () => {
   const [nombre, setNombre] = useState("");
   const [megas, setMegas] = useState("");
@@ -214,7 +213,7 @@ const Cuenca = () => {
         </Container>
         <ModalPlan
           planAgencia={"Azuay - Cuenca"}
-          planEmail={"crferminr@gmail.com"}
+          planEmail={"ventas.cuenca@hallo.ec"}
           planNombre={nombre}
           planMegas={megas}
           planPrecio={precio}
