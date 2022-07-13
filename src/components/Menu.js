@@ -98,15 +98,18 @@ const Menu = () => {
                 className="social-logo"
               />
             </Nav.Link>
-            <Nav.Link href="" target="_blank">
+            <Nav.Link
+              href="https://www.instagram.com/hallo_network/?hl=es"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StaticImage
                 src="../images/assets/instagram.svg"
                 alt="instragram logo"
                 className="social-logo"
               />
             </Nav.Link>
-
-            <Nav.Link href="" target="_blank">
+            <Nav.Link href="https://vm.tiktok.com/ZMN5h2BmV/" target="_blank">
               <StaticImage
                 src="../images/assets/tiktok.svg"
                 alt="tik tok logo"

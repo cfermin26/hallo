@@ -64,7 +64,7 @@ const UniversoHallo = () => {
                 <Row>
                   <Col md={12} className="mt-3">
                     <StaticImage
-                      src="../images/universo-hallo/home-security.png"
+                      src="../images/universo-hallo/home-security.jpg"
                       alt="Hallo home security"
                     />
                   </Col>

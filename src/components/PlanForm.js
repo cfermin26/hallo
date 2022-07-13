@@ -112,12 +112,12 @@ const PlanForm = ({ type, size, number, agency, idealPlan }) => {
         setAsunto("");
         setMensaje("");
         e.target.reset();
-        window.location.replace("https://hallo.ec");
         setActiveSpinner(false);
         Toast.fire({
           icon: "success",
           title: "Su mensaje ha sido enviado exitosamente",
         });
+        window.location.replace("https://hallo.ec");
       } else {
         setActiveSpinner(false);
         Toast.fire({
