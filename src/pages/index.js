@@ -155,6 +155,9 @@ const IndexPage = () => {
                             <Dropdown.Item as={Link} to="/cuenca">
                               Cuenca
                             </Dropdown.Item>
+                            <Dropdown.Item as={Link} to="/pucara">
+                              Pucará
+                            </Dropdown.Item>
                           </Dropdown.Menu>
                         </Dropdown>
 

@@ -71,11 +71,16 @@ const IdealPlan = () => {
   const [businessAgency, setBusinessAgency] = useState(0);
 
   // useEffect(() => {
-  //   console.log("Plan: " + housePlan);
+  //   console.log("Plan: " + houseMegas);
   // }, [houseSize]);
 
-  var housePlan;
-  var businessPlan;
+  var houseMegas;
+  var housePrice;
+  var houseName;
+
+  var businessMegas;
+  var businessPrice;
+  var businessName;
 
   /****** House Pequeño 1-2 ******/
   //Casa, Pequeño, 1-2, Azuay - Cuenca
@@ -85,7 +90,10 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "1"
   ) {
-    housePlan = 45;
+    houseName = "Basic";
+    houseMegas = 45;
+    housePrice = "19.50";
+
     //Casa, Pequeño, 1-2, Azuay - Pucara
   } else if (
     houseSize === "1" &&
@@ -93,7 +101,7 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "2"
   ) {
-    housePlan = 25;
+    houseMegas = 25;
     //Casa, Pequeño, 1-2, Bolivar - Las Naves
   } else if (
     houseSize === "1" &&
@@ -101,7 +109,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "3"
   ) {
-    housePlan = 30;
+    houseName = "Basic";
+    houseMegas = 30;
+    housePrice = "19.64";
   }
   //Casa, Pequeño, 1-2, Cañar - La Troncal
   else if (
@@ -110,7 +120,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "4"
   ) {
-    housePlan = 45;
+    houseName = "Basic";
+    houseMegas = 45;
+    housePrice = "17.50";
   }
   //Casa, Pequeño, 1-2, Loja - Loja
   else if (
@@ -119,7 +131,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "5"
   ) {
-    housePlan = 50;
+    houseName = "Basic";
+    houseMegas = 50;
+    housePrice = "19.50";
   }
   //Casa, Pequeño, 1-2, Los Ríos - Quinsaloma
   else if (
@@ -128,7 +142,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "6"
   ) {
-    housePlan = 35;
+    houseName = "Basic";
+    houseMegas = 35;
+    housePrice = "19.64";
   }
   //Casa, Pequeño, 1-2, Pichincha - Quito
   else if (
@@ -137,7 +153,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "7"
   ) {
-    housePlan = 45;
+    houseName = "Basic";
+    houseMegas = 45;
+    housePrice = "19.50";
   }
   //Casa, Pequeño, 1-2, Santa Elena - La Libertad
   else if (
@@ -146,7 +164,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "8"
   ) {
-    housePlan = 35;
+    houseName = "Basic";
+    houseMegas = 35;
+    housePrice = "19.50";
   }
   //Casa, Pequeño, 1-2, Zamora Chinchipe - Yantzaza
   else if (
@@ -155,7 +175,7 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "9"
   ) {
-    housePlan = 25;
+    houseMegas = 25;
   }
 
   /****** House Mediano 1-2 ******/
@@ -166,7 +186,10 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "1"
   ) {
-    housePlan = 80;
+    houseName = "House";
+    houseMegas = 80;
+    housePrice = "23.50";
+
     //Casa, Mediano, 1-2, Azuay - Pucara
   } else if (
     houseSize === "2" &&
@@ -174,7 +197,7 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "2"
   ) {
-    housePlan = 35;
+    houseMegas = 35;
     //Casa, Mediano, 1-2, Bolivar - Las Naves
   } else if (
     houseSize === "2" &&
@@ -182,7 +205,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "3"
   ) {
-    housePlan = 50;
+    houseName = "Pro";
+    houseMegas = 50;
+    housePrice = "28.57";
   }
   //Casa, Mediano, 1-2, Cañar - La Troncal
   else if (
@@ -191,7 +216,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "4"
   ) {
-    housePlan = 65;
+    houseName = "House";
+    houseMegas = 65;
+    housePrice = "22.00";
   }
   //Casa, Mediano, 1-2, Loja - Loja
   else if (
@@ -200,7 +227,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "5"
   ) {
-    housePlan = 75;
+    houseName = "House";
+    houseMegas = 75;
+    housePrice = "23.50";
   }
   //Casa, Mediano, 1-2, Los Ríos - Quinsaloma
   else if (
@@ -209,7 +238,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "6"
   ) {
-    housePlan = 45;
+    houseName = "House";
+    houseMegas = 45;
+    housePrice = "24.55";
   }
   //Casa, Mediano, 1-2, Pichincha - Quito
   else if (
@@ -218,7 +249,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "7"
   ) {
-    housePlan = 75;
+    houseName = "House";
+    houseMegas = 65;
+    housePrice = "23.50";
   }
   //Casa, Mediano, 1-2, Santa Elena - La Libertad
   else if (
@@ -227,7 +260,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "8"
   ) {
-    housePlan = 45;
+    houseName = "House";
+    houseMegas = 45;
+    housePrice = "23.50";
   }
   //Casa, Mediano, 1-2, Zamora Chinchipe - Yantzaza
   else if (
@@ -236,7 +271,7 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "9"
   ) {
-    housePlan = 35;
+    houseMegas = 35;
   }
 
   /****** House Grande 1-2 ******/
@@ -247,7 +282,10 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "1"
   ) {
-    housePlan = 160;
+    houseName = "Gamer";
+    houseMegas = 160;
+    housePrice = "40.50";
+
     //Casa, Grande, 1-2, Azuay - Pucara
   } else if (
     houseSize === "3" &&
@@ -255,7 +293,7 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "2"
   ) {
-    housePlan = 35;
+    houseMegas = 35;
     //Casa, Grande, 1-2, Bolivar - Las Naves
   } else if (
     houseSize === "3" &&
@@ -263,7 +301,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "3"
   ) {
-    housePlan = 40;
+    houseName = "House";
+    houseMegas = 40;
+    housePrice = "24.11";
   }
   //Casa, Grande, 1-2, Cañar - La Troncal
   else if (
@@ -272,7 +312,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "4"
   ) {
-    housePlan = 100;
+    houseName = "Gamer";
+    houseMegas = 100;
+    housePrice = "35.50";
   }
   //Casa, Grande, 1-2, Loja - Loja
   else if (
@@ -281,7 +323,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "5"
   ) {
-    housePlan = 100;
+    houseName = "Pro";
+    houseMegas = 100;
+    housePrice = "30.50";
   }
   //Casa, Grande, 1-2, Los Ríos - Quinsaloma
   else if (
@@ -290,7 +334,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "6"
   ) {
-    housePlan = 45;
+    houseName = "House";
+    houseMegas = 45;
+    housePrice = "24.55";
   }
   //Casa, Grande, 1-2, Pichincha - Quito
   else if (
@@ -299,7 +345,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "7"
   ) {
-    housePlan = 100;
+    houseName = "Gamer";
+    houseMegas = 100;
+    housePrice = "32.50";
   }
   //Casa, Grande, 1-2, Santa Elena - La Libertad
   else if (
@@ -308,7 +356,9 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "8"
   ) {
-    housePlan = 75;
+    houseName = "Gamer";
+    houseMegas = 75;
+    housePrice = "29.50";
   }
   //Casa, Grande, 1-2, Zamora Chinchipe - Yantzaza
   else if (
@@ -317,7 +367,7 @@ const IdealPlan = () => {
     houseNumber <= "2" &&
     houseAgency === "9"
   ) {
-    housePlan = 35;
+    houseMegas = 35;
   }
 
   /****** House Pequeño 3-4 ******/
@@ -328,7 +378,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "1"
   ) {
-    housePlan = 80;
+    houseName = "House";
+    houseMegas = 80;
+    housePrice = "23.50";
     //Casa, Pequeño, 3-4, Azuay - Pucara
   } else if (
     houseSize === "1" &&
@@ -336,7 +388,7 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "2"
   ) {
-    housePlan = 35;
+    houseMegas = 35;
     //Casa, Pequeño, 3-4, Bolivar - Las Naves
   } else if (
     houseSize === "1" &&
@@ -344,7 +396,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "3"
   ) {
-    housePlan = 40;
+    houseName = "House";
+    houseMegas = 40;
+    housePrice = "24.11";
   }
   //Casa, Pequeño, 3-4, Cañar - La Troncal
   else if (
@@ -353,7 +407,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "4"
   ) {
-    housePlan = 65;
+    houseName = "House";
+    houseMegas = 65;
+    housePrice = "22.00";
   }
   //Casa, Pequeño, 3-4, Loja - Loja
   else if (
@@ -362,7 +418,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "5"
   ) {
-    housePlan = 75;
+    houseName = "House";
+    houseMegas = 75;
+    housePrice = "23.50";
   }
   //Casa, Pequeño, 3-4, Los Ríos - Quinsaloma
   else if (
@@ -371,7 +429,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "6"
   ) {
-    housePlan = 45;
+    houseName = "House";
+    houseMegas = 45;
+    housePrice = "24.55";
   }
   //Casa, Pequeño, 3-4, Pichincha - Quito
   else if (
@@ -380,7 +440,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "7"
   ) {
-    housePlan = 65;
+    houseName = "House";
+    houseMegas = 65;
+    housePrice = "23.50";
   }
   //Casa, Pequeño, 3-4, Santa Elena - La Libertad
   else if (
@@ -389,7 +451,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "8"
   ) {
-    housePlan = 45;
+    houseName = "House";
+    houseMegas = 45;
+    housePrice = "23.50";
   }
   //Casa, Pequeño, 3-4, Zamora Chinchipe - Yantzaza
   else if (
@@ -398,7 +462,7 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "9"
   ) {
-    housePlan = 35;
+    houseMegas = 35;
   }
 
   /****** House Mediano 3-4 ******/
@@ -409,7 +473,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "1"
   ) {
-    housePlan = 100;
+    houseName = "Pro";
+    houseMegas = 100;
+    housePrice = "29.50";
     //Casa, Mediano, 3-4, Azuay - Pucara
   } else if (
     houseSize === "2" &&
@@ -417,7 +483,7 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "2"
   ) {
-    housePlan = 45;
+    houseMegas = 45;
     //Casa, Mediano, 3-4, Bolivar - Las Naves
   } else if (
     houseSize === "2" &&
@@ -425,7 +491,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "3"
   ) {
-    housePlan = 50;
+    houseName = "Pro";
+    houseMegas = 50;
+    housePrice = "28.57";
   }
   //Casa, Mediano, 3-4, Cañar - La Troncal
   else if (
@@ -434,7 +502,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "4"
   ) {
-    housePlan = 80;
+    houseName = "Pro";
+    houseMegas = 80;
+    housePrice = "26.50";
   }
   //Casa, Mediano, 3-4, Loja - Loja
   else if (
@@ -443,7 +513,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "5"
   ) {
-    housePlan = 100;
+    houseName = "Pro";
+    houseMegas = 100;
+    housePrice = "30.50";
   }
   //Casa, Mediano, 3-4, Los Ríos - Quinsaloma
   else if (
@@ -452,7 +524,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "6"
   ) {
-    housePlan = 65;
+    houseName = "Pro";
+    houseMegas = 65;
+    housePrice = "29.46";
   }
   //Casa, Mediano, 3-4, Pichincha - Quito
   else if (
@@ -461,7 +535,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "7"
   ) {
-    housePlan = 80;
+    houseName = "Pro";
+    houseMegas = 80;
+    housePrice = "29.50";
   }
   //Casa, Mediano, 3-4, Santa Elena - La Libertad
   else if (
@@ -470,7 +546,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "8"
   ) {
-    housePlan = 55;
+    houseName = "Pro";
+    houseMegas = 55;
+    housePrice = "27.50";
   }
   //Casa, Mediano, 3-4, Zamora Chinchipe - Yantzaza
   else if (
@@ -479,7 +557,7 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "9"
   ) {
-    housePlan = 50;
+    houseMegas = 50;
   }
 
   /****** House Grande 3-4 ******/
@@ -490,7 +568,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "1"
   ) {
-    housePlan = 250;
+    houseName = "Diamond";
+    houseMegas = 250;
+    housePrice = "56.50";
     //Casa, Grande, 3-4, Azuay - Pucara
   } else if (
     houseSize === "3" &&
@@ -498,7 +578,7 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "2"
   ) {
-    housePlan = 45;
+    houseMegas = 45;
     //Casa, Grande, 3-4, Bolivar - Las Naves
   } else if (
     houseSize === "3" &&
@@ -506,7 +586,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "3"
   ) {
-    housePlan = 50;
+    houseName = "Pro";
+    houseMegas = 50;
+    housePrice = "28.57";
   }
   //Casa, Grande, 3-4, Cañar - La Troncal
   else if (
@@ -515,7 +597,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "4"
   ) {
-    housePlan = 160;
+    houseName = "Diamond";
+    houseMegas = 160;
+    housePrice = "53.50";
   }
   //Casa, Grande, 3-4, Loja - Loja
   else if (
@@ -524,7 +608,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "5"
   ) {
-    housePlan = 200;
+    houseName = "Gamer";
+    houseMegas = 200;
+    housePrice = "60.50";
   }
   //Casa, Grande, 3-4, Los Ríos - Quinsaloma
   else if (
@@ -533,7 +619,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "6"
   ) {
-    housePlan = 65;
+    houseName = "Pro";
+    houseMegas = 65;
+    housePrice = "29.46";
   }
   //Casa, Grande, 3-4, Pichincha - Quito
   else if (
@@ -542,7 +630,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "7"
   ) {
-    housePlan = 160;
+    houseName = "Diamond";
+    houseMegas = 160;
+    housePrice = "45.50";
   }
   //Casa, Grande, 3-4, Santa Elena - La Libertad
   else if (
@@ -551,7 +641,9 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "8"
   ) {
-    housePlan = 100;
+    houseName = "Diamond";
+    houseMegas = 100;
+    housePrice = "40.50";
   }
   //Casa, Grande, 3-4, Zamora Chinchipe - Yantzaza
   else if (
@@ -560,115 +652,157 @@ const IdealPlan = () => {
     houseNumber <= "4" &&
     houseAgency === "9"
   ) {
-    housePlan = 50;
+    houseMegas = 50;
   }
 
   /****** House Pequeño 5+ ******/
   //Casa, Pequeño, 5+, Azuay - Cuenca
   if (houseSize === "1" && houseNumber === "5" && houseAgency === "1") {
-    housePlan = 100;
+    houseName = "Pro";
+    houseMegas = 100;
+    housePrice = "29.50";
     //Casa, Pequeño, 5+, Azuay - Pucara
   } else if (houseSize === "1" && houseNumber === "5" && houseAgency === "2") {
-    housePlan = 45;
+    houseMegas = 45;
     //Casa, Pequeño, 5+, Bolivar - Las Naves
   } else if (houseSize === "1" && houseNumber === "5" && houseAgency === "3") {
-    housePlan = 50;
+    houseName = "Pro";
+    houseMegas = 50;
+    housePrice = "28.57";
   }
   //Casa, Pequeño, 5+, Cañar - La Troncal
   else if (houseSize === "1" && houseNumber === "5" && houseAgency === "4") {
-    housePlan = 80;
+    houseName = "Pro";
+    houseMegas = 80;
+    housePrice = "26.50";
   }
   //Casa, Pequeño, 5+, Loja - Loja
   else if (houseSize === "1" && houseNumber === "5" && houseAgency === "5") {
-    housePlan = 100;
+    houseName = "Pro";
+    houseMegas = 100;
+    housePrice = "30.50";
   }
   //Casa, Pequeño, 5+, Los Ríos - Quinsaloma
   else if (houseSize === "1" && houseNumber === "5" && houseAgency === "6") {
-    housePlan = 65;
+    houseName = "Pro";
+    houseMegas = 65;
+    housePrice = "29.46";
   }
   //Casa, Pequeño, 5+, Pichincha - Quito
   else if (houseSize === "1" && houseNumber === "5" && houseAgency === "7") {
-    housePlan = 80;
+    houseName = "Pro";
+    houseMegas = 80;
+    housePrice = "29.50";
   }
   //Casa, Pequeño, 5+, Santa Elena - La Libertad
   else if (houseSize === "1" && houseNumber === "5" && houseAgency === "8") {
-    housePlan = 55;
+    houseName = "Pro";
+    houseMegas = 55;
+    housePrice = "27.50";
   }
   //Casa, Pequeño, 5+, Zamora Chinchipe - Yantzaza
   else if (houseSize === "1" && houseNumber === "5" && houseAgency === "9") {
-    housePlan = 50;
+    houseMegas = 50;
   }
 
   /****** House Mediano 5+ ******/
   //Casa, Mediano, 5+, Azuay - Cuenca
   if (houseSize === "2" && houseNumber === "5" && houseAgency === "1") {
-    housePlan = 160;
+    houseName = "Gamer";
+    houseMegas = 160;
+    housePrice = "40.50";
     //Casa, Mediano, 5+, Azuay - Pucara
   } else if (houseSize === "2" && houseNumber === "5" && houseAgency === "2") {
-    housePlan = 45;
+    houseMegas = 45;
     //Casa, Mediano, 5+, Bolivar - Las Naves
   } else if (houseSize === "2" && houseNumber === "5" && houseAgency === "3") {
-    housePlan = 50;
+    houseName = "Pro";
+    houseMegas = 50;
+    housePrice = "28.57";
   }
   //Casa, Mediano, 5+, Cañar - La Troncal
   else if (houseSize === "2" && houseNumber === "5" && houseAgency === "4") {
-    housePlan = 100;
+    houseName = "Gamer";
+    houseMegas = 100;
+    housePrice = "35.50";
   }
   //Casa, Mediano, 5+, Loja - Loja
   else if (houseSize === "2" && houseNumber === "5" && houseAgency === "5") {
-    housePlan = 100;
+    houseName = "Pro";
+    houseMegas = 100;
+    housePrice = "30.50";
   }
   //Casa, Mediano, 5+, Los Ríos - Quinsaloma
   else if (houseSize === "2" && houseNumber === "5" && houseAgency === "6") {
-    housePlan = 65;
+    houseName = "Pro";
+    houseMegas = 65;
+    housePrice = "29.46";
   }
   //Casa, Mediano, 5+, Pichincha - Quito
   else if (houseSize === "2" && houseNumber === "5" && houseAgency === "7") {
-    housePlan = 100;
+    houseName = "Gamer";
+    houseMegas = 100;
+    housePrice = "32.50";
   }
   //Casa, Mediano, 5+, Santa Elena - La Libertad
   else if (houseSize === "2" && houseNumber === "5" && houseAgency === "8") {
-    housePlan = 75;
+    houseName = "Gamer";
+    houseMegas = 75;
+    housePrice = "29.50";
   }
   //Casa, Mediano, 5+, Zamora Chinchipe - Yantzaza
   else if (houseSize === "2" && houseNumber === "5" && houseAgency === "9") {
-    housePlan = 50;
+    houseMegas = 50;
   }
 
   /****** House Grande 5+ ******/
   //Casa, Grande, 5+, Azuay - Cuenca
   if (houseSize === "3" && houseNumber === "5" && houseAgency === "1") {
-    housePlan = 300;
+    houseName = "Platinium";
+    houseMegas = 300;
+    housePrice = "72.50";
     //Casa, Grande, 5+, Azuay - Pucara
   } else if (houseSize === "3" && houseNumber === "5" && houseAgency === "2") {
-    housePlan = 45;
+    houseMegas = 45;
     //Casa, Grande, 5+, Bolivar - Las Naves
   } else if (houseSize === "3" && houseNumber === "5" && houseAgency === "3") {
-    housePlan = 80;
+    houseName = "Gamer";
+    houseMegas = 80;
+    housePrice = "42.24";
   }
   //Casa, Grande, 5+, Cañar - La Troncal
   else if (houseSize === "3" && houseNumber === "5" && houseAgency === "4") {
-    housePlan = 200;
+    houseName = "Platinium";
+    houseMegas = 200;
+    housePrice = "78.50";
   }
   //Casa, Grande, 5+, Loja - Loja
   else if (houseSize === "3" && houseNumber === "5" && houseAgency === "5") {
-    housePlan = 200;
+    houseName = "Gamer";
+    houseMegas = 200;
+    housePrice = "60.50";
   }
   //Casa, Grande, 5+, Los Ríos - Quinsaloma
   else if (houseSize === "3" && houseNumber === "5" && houseAgency === "6") {
-    housePlan = 80;
+    houseName = "Gamer";
+    houseMegas = 80;
+    housePrice = "42.24";
   }
   //Casa, Grande, 5+, Pichincha - Quito
   else if (houseSize === "3" && houseNumber === "5" && houseAgency === "7") {
-    housePlan = 200;
+    houseName = "Platinium";
+    houseMegas = 200;
+    housePrice = "57.50";
   }
   //Casa, Grande, 5+, Santa Elena - La Libertad
   else if (houseSize === "3" && houseNumber === "5" && houseAgency === "8") {
-    housePlan = 160;
+    houseName = "Platinium";
+    houseMegas = 160;
+    housePrice = "56.50";
   }
   //Casa, Grande, 5+, Zamora Chinchipe - Yantzaza
   else if (houseSize === "3" && houseNumber === "5" && houseAgency === "9") {
-    housePlan = 50;
+    houseMegas = 50;
   }
 
   /****** Negocio Pequeño 1-2 ******/
@@ -679,7 +813,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "1"
   ) {
-    businessPlan = 45;
+    businessName = "Basic";
+    businessMegas = 45;
+    businessPrice = "19.50";
     //Negocio, Pequeño, 1-2, Azuay - Pucara
   } else if (
     businessSize === "1" &&
@@ -687,7 +823,7 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "2"
   ) {
-    businessPlan = 25;
+    businessMegas = 25;
     //Negocio, Pequeño, 1-2, Bolivar - Las Naves
   } else if (
     businessSize === "1" &&
@@ -695,7 +831,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "3"
   ) {
-    businessPlan = 30;
+    businessName = "Basic";
+    businessMegas = 30;
+    businessPrice = "19.64";
   }
   //Negocio, Pequeño, 1-2, Cañar - La Troncal
   else if (
@@ -704,7 +842,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "4"
   ) {
-    businessPlan = 45;
+    businessName = "Basic";
+    businessMegas = 45;
+    businessPrice = "17.50";
   }
   //Negocio, Pequeño, 1-2, Loja - Loja
   else if (
@@ -713,7 +853,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "5"
   ) {
-    businessPlan = 50;
+    businessName = "Basic";
+    businessMegas = 50;
+    businessPrice = "19.50";
   }
   //Negocio, Pequeño, 1-2, Los Ríos - Quinsaloma
   else if (
@@ -722,7 +864,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "6"
   ) {
-    businessPlan = 35;
+    businessName = "Basic";
+    businessMegas = 35;
+    businessPrice = "19.64";
   }
   //Negocio, Pequeño, 1-2, Pichincha - Quito
   else if (
@@ -731,7 +875,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "7"
   ) {
-    businessPlan = 45;
+    businessName = "Basic";
+    businessMegas = 45;
+    businessPrice = "19.50";
   }
   //Negocio, Pequeño, 1-2, Santa Elena - La Libertad
   else if (
@@ -740,7 +886,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "8"
   ) {
-    businessPlan = 35;
+    businessName = "Basic";
+    businessMegas = 35;
+    businessPrice = "19.50";
   }
   //Negocio, Pequeño, 1-2, Zamora Chinchipe - Yantzaza
   else if (
@@ -749,7 +897,7 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "9"
   ) {
-    businessPlan = 25;
+    businessMegas = 25;
   }
 
   /****** Negocio Mediano 1-2 ******/
@@ -760,7 +908,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "1"
   ) {
-    businessPlan = 80;
+    businessName = "House";
+    businessMegas = 80;
+    businessPrice = "23.50";
     //Negocio, Mediano, 1-2, Azuay - Pucara
   } else if (
     businessSize === "2" &&
@@ -768,7 +918,7 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "2"
   ) {
-    businessPlan = 35;
+    businessMegas = 35;
     //Negocio, Mediano, 1-2, Bolivar - Las Naves
   } else if (
     businessSize === "2" &&
@@ -776,7 +926,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "3"
   ) {
-    businessPlan = 40;
+    businessName = "House";
+    businessMegas = 40;
+    businessPrice = "24.11";
   }
   //Negocio, Mediano, 1-2, Cañar - La Troncal
   else if (
@@ -785,7 +937,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "4"
   ) {
-    businessPlan = 65;
+    businessName = "House";
+    businessMegas = 65;
+    businessPrice = "22.00";
   }
   //Negocio, Mediano, 1-2, Loja - Loja
   else if (
@@ -794,7 +948,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "5"
   ) {
-    businessPlan = 75;
+    businessName = "House";
+    businessMegas = 75;
+    businessPrice = "23.50";
   }
   //Negocio, Mediano, 1-2, Los Ríos - Quinsaloma
   else if (
@@ -803,7 +959,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "6"
   ) {
-    businessPlan = 45;
+    businessName = "House";
+    businessMegas = 45;
+    businessPrice = "24.55";
   }
   //Negocio, Mediano, 1-2, Pichincha - Quito
   else if (
@@ -812,7 +970,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "7"
   ) {
-    businessPlan = 65;
+    businessName = "House";
+    businessMegas = 65;
+    businessPrice = "23.50";
   }
   //Negocio, Mediano, 1-2, Santa Elena - La Libertad
   else if (
@@ -821,7 +981,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "8"
   ) {
-    businessPlan = 45;
+    businessName = "House";
+    businessMegas = 45;
+    businessPrice = "23.50";
   }
   //Negocio, Mediano, 1-2, Zamora Chinchipe - Yantzaza
   else if (
@@ -830,7 +992,7 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "9"
   ) {
-    businessPlan = 35;
+    businessMegas = 35;
   }
 
   /****** Negocio Grande 1-2 ******/
@@ -841,7 +1003,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "1"
   ) {
-    businessPlan = 160;
+    businessName = "Gamer";
+    businessMegas = 160;
+    businessPrice = "40.50";
     //Negocio, Grande, 1-2, Azuay - Pucara
   } else if (
     businessSize === "3" &&
@@ -849,7 +1013,7 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "2"
   ) {
-    businessPlan = 35;
+    businessMegas = 35;
     //Negocio, Grande, 1-2, Bolivar - Las Naves
   } else if (
     businessSize === "3" &&
@@ -857,7 +1021,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "3"
   ) {
-    businessPlan = 50;
+    businessName = "Pro";
+    businessMegas = 50;
+    businessPrice = "28.57";
   }
   //Negocio, Grande, 1-2, Cañar - La Troncal
   else if (
@@ -866,7 +1032,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "4"
   ) {
-    businessPlan = 100;
+    businessName = "Gamer";
+    businessMegas = 100;
+    businessPrice = "35.50";
   }
   //Negocio, Grande, 1-2, Loja - Loja
   else if (
@@ -875,7 +1043,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "5"
   ) {
-    businessPlan = 100;
+    businessName = "Pro";
+    businessMegas = 100;
+    businessPrice = "30.50";
   }
   //Negocio, Grande, 1-2, Los Ríos - Quinsaloma
   else if (
@@ -884,7 +1054,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "6"
   ) {
-    businessPlan = 45;
+    businessName = "House";
+    businessMegas = 45;
+    businessPrice = "24.55";
   }
   //Negocio, Grande, 1-2, Pichincha - Quito
   else if (
@@ -893,7 +1065,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "7"
   ) {
-    businessPlan = 100;
+    businessName = "Gamer";
+    businessMegas = 100;
+    businessPrice = "32.50";
   }
   //Negocio, Grande, 1-2, Santa Elena - La Libertad
   else if (
@@ -902,7 +1076,9 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "8"
   ) {
-    businessPlan = 75;
+    businessName = "Gamer";
+    businessMegas = 75;
+    businessPrice = "29.50";
   }
   //Negocio, Grande, 1-2, Zamora Chinchipe - Yantzaza
   else if (
@@ -911,7 +1087,7 @@ const IdealPlan = () => {
     businessNumber <= "2" &&
     businessAgency === "9"
   ) {
-    businessPlan = 35;
+    businessMegas = 35;
   }
 
   /****** Negocio Pequeño 3-4 ******/
@@ -922,7 +1098,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "1"
   ) {
-    businessPlan = 80;
+    businessName = "House";
+    businessMegas = 80;
+    businessPrice = "23.50";
     //Negocio, Pequeño, 3-4, Azuay - Pucara
   } else if (
     businessSize === "1" &&
@@ -930,7 +1108,7 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "2"
   ) {
-    businessPlan = 35;
+    businessMegas = 35;
     //Negocio, Pequeño, 3-4, Bolivar - Las Naves
   } else if (
     businessSize === "1" &&
@@ -938,7 +1116,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "3"
   ) {
-    businessPlan = 40;
+    businessName = "House";
+    businessMegas = 40;
+    businessPrice = "24.11";
   }
   //Negocio, Pequeño, 3-4, Cañar - La Troncal
   else if (
@@ -947,7 +1127,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "4"
   ) {
-    businessPlan = 65;
+    businessName = "House";
+    businessMegas = 65;
+    businessPrice = "22.00";
   }
   //Negocio, Pequeño, 3-4, Loja - Loja
   else if (
@@ -956,7 +1138,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "5"
   ) {
-    businessPlan = 75;
+    businessName = "House";
+    businessMegas = 75;
+    businessPrice = "23.50";
   }
   //Negocio, Pequeño, 3-4, Los Ríos - Quinsaloma
   else if (
@@ -965,7 +1149,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "6"
   ) {
-    businessPlan = 45;
+    businessName = "House";
+    businessMegas = 45;
+    businessPrice = "24.55";
   }
   //Negocio, Pequeño, 3-4, Pichincha - Quito
   else if (
@@ -974,7 +1160,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "7"
   ) {
-    businessPlan = 65;
+    businessName = "House";
+    businessMegas = 65;
+    businessPrice = "23.50";
   }
   //Negocio, Pequeño, 3-4, Santa Elena - La Libertad
   else if (
@@ -983,7 +1171,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "8"
   ) {
-    businessPlan = 45;
+    businessName = "House";
+    businessMegas = 45;
+    businessPrice = "23.50";
   }
   //Negocio, Pequeño, 3-4, Zamora Chinchipe - Yantzaza
   else if (
@@ -992,7 +1182,7 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "9"
   ) {
-    businessPlan = 35;
+    businessMegas = 35;
   }
 
   /****** Negocio Mediano 3-4 ******/
@@ -1003,7 +1193,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "1"
   ) {
-    businessPlan = 100;
+    businessName = "Pro";
+    businessMegas = 100;
+    businessPrice = "29.50";
     //Negocio, Mediano, 3-4, Azuay - Pucara
   } else if (
     businessSize === "2" &&
@@ -1011,7 +1203,7 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "2"
   ) {
-    businessPlan = 45;
+    businessMegas = 45;
     //Negocio, Mediano, 3-4, Bolivar - Las Naves
   } else if (
     businessSize === "2" &&
@@ -1019,7 +1211,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "3"
   ) {
-    businessPlan = 50;
+    businessName = "Pro";
+    businessMegas = 50;
+    businessPrice = "28.57";
   }
   //Negocio, Mediano, 3-4, Cañar - La Troncal
   else if (
@@ -1028,7 +1222,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "4"
   ) {
-    businessPlan = 80;
+    businessName = "Pro";
+    businessMegas = 80;
+    businessPrice = "26.50";
   }
   //Negocio, Mediano, 3-4, Loja - Loja
   else if (
@@ -1037,7 +1233,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "5"
   ) {
-    businessPlan = 100;
+    businessName = "Pro";
+    businessMegas = 100;
+    businessPrice = "30.50";
   }
   //Negocio, Mediano, 3-4, Los Ríos - Quinsaloma
   else if (
@@ -1046,7 +1244,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "6"
   ) {
-    businessPlan = 65;
+    businessName = "Pro";
+    businessMegas = 65;
+    businessPrice = "29.46";
   }
   //Negocio, Mediano, 3-4, Pichincha - Quito
   else if (
@@ -1055,7 +1255,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "7"
   ) {
-    businessPlan = 80;
+    businessName = "Pro";
+    businessMegas = 80;
+    businessPrice = "29.50";
   }
   //Negocio, Mediano, 3-4, Santa Elena - La Libertad
   else if (
@@ -1064,7 +1266,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "8"
   ) {
-    businessPlan = 55;
+    businessName = "Pro";
+    businessMegas = 55;
+    businessPrice = "27.50";
   }
   //Negocio, Mediano, 3-4, Zamora Chinchipe - Yantzaza
   else if (
@@ -1073,7 +1277,7 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "9"
   ) {
-    businessPlan = 50;
+    businessMegas = 50;
   }
 
   /****** House Grande 3-4 ******/
@@ -1084,7 +1288,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "1"
   ) {
-    businessPlan = 250;
+    businessName = "Diamond";
+    businessMegas = 250;
+    businessPrice = "56.50";
     //Negocio, Grande, 3-4, Azuay - Pucara
   } else if (
     businessSize === "3" &&
@@ -1092,7 +1298,7 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "2"
   ) {
-    businessPlan = 45;
+    businessMegas = 45;
     //Negocio, Grande, 3-4, Bolivar - Las Naves
   } else if (
     businessSize === "3" &&
@@ -1100,7 +1306,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "3"
   ) {
-    businessPlan = 80;
+    businessName = "Gamer";
+    businessMegas = 80;
+    businessPrice = "42.24";
   }
   //Negocio, Grande, 3-4, Cañar - La Troncal
   else if (
@@ -1109,7 +1317,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "4"
   ) {
-    businessPlan = 160;
+    businessName = "Diamond";
+    businessMegas = 160;
+    businessPrice = "53.50";
   }
   //Negocio, Grande, 3-4, Loja - Loja
   else if (
@@ -1118,7 +1328,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "5"
   ) {
-    businessPlan = 200;
+    businessName = "Gamer";
+    businessMegas = 200;
+    businessPrice = "60.50";
   }
   //Negocio, Grande, 3-4, Los Ríos - Quinsaloma
   else if (
@@ -1127,7 +1339,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "6"
   ) {
-    businessPlan = 65;
+    businessName = "Pro";
+    businessMegas = 65;
+    businessPrice = "29.46";
   }
   //Negocio, Grande, 3-4, Pichincha - Quito
   else if (
@@ -1136,7 +1350,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "7"
   ) {
-    businessPlan = 160;
+    businessName = "Diamond";
+    businessMegas = 160;
+    businessPrice = "45.50";
   }
   //Negocio, Grande, 3-4, Santa Elena - La Libertad
   else if (
@@ -1145,7 +1361,9 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "8"
   ) {
-    businessPlan = 100;
+    businessName = "Diamond";
+    businessMegas = 100;
+    businessPrice = "40.50";
   }
   //Negocio, Grande, 3-4, Zamora Chinchipe - Yantzaza
   else if (
@@ -1154,31 +1372,35 @@ const IdealPlan = () => {
     businessNumber <= "4" &&
     businessAgency === "9"
   ) {
-    businessPlan = 50;
+    businessMegas = 50;
   }
 
-  /****** House Pequeño 5+ ******/
+  /******Negocio Pequeño 5+ ******/
   //Negocio, Pequeño, 5+, Azuay - Cuenca
   if (
     businessSize === "1" &&
     businessNumber === "5" &&
     businessAgency === "1"
   ) {
-    businessPlan = 100;
+    businessName = "Pro";
+    businessMegas = 100;
+    businessPrice = "29.50";
     //Negocio, Pequeño, 5+, Azuay - Pucara
   } else if (
     businessSize === "1" &&
     businessNumber === "5" &&
     businessAgency === "2"
   ) {
-    businessPlan = 45;
+    businessMegas = 45;
     //Negocio, Pequeño, 5+, Bolivar - Las Naves
   } else if (
     businessSize === "1" &&
     businessNumber === "5" &&
     businessAgency === "3"
   ) {
-    businessPlan = 50;
+    businessName = "Pro";
+    businessMegas = 50;
+    businessPrice = "28.57";
   }
   //Negocio, Pequeño, 5+, Cañar - La Troncal
   else if (
@@ -1186,7 +1408,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "4"
   ) {
-    businessPlan = 80;
+    businessName = "Pro";
+    businessMegas = 80;
+    businessPrice = "26.50";
   }
   //Negocio, Pequeño, 5+, Loja - Loja
   else if (
@@ -1194,7 +1418,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "5"
   ) {
-    businessPlan = 100;
+    businessName = "Pro";
+    businessMegas = 100;
+    businessPrice = "30.50";
   }
   //Negocio, Pequeño, 5+, Los Ríos - Quinsaloma
   else if (
@@ -1202,7 +1428,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "6"
   ) {
-    businessPlan = 65;
+    businessName = "Pro";
+    businessMegas = 65;
+    businessPrice = "29.46";
   }
   //Negocio, Pequeño, 5+, Pichincha - Quito
   else if (
@@ -1210,7 +1438,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "7"
   ) {
-    businessPlan = 80;
+    businessName = "Pro";
+    businessMegas = 80;
+    businessPrice = "29.50";
   }
   //Negocio, Pequeño, 5+, Santa Elena - La Libertad
   else if (
@@ -1218,7 +1448,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "8"
   ) {
-    businessPlan = 55;
+    businessName = "Pro";
+    businessMegas = 55;
+    businessPrice = "27.50";
   }
   //Negocio, Pequeño, 5+, Zamora Chinchipe - Yantzaza
   else if (
@@ -1226,31 +1458,35 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "9"
   ) {
-    businessPlan = 50;
+    businessMegas = 50;
   }
 
-  /****** House Mediano 5+ ******/
+  /****** Negocio Mediano 5+ ******/
   //Negocio, Mediano, 5+, Azuay - Cuenca
   if (
     businessSize === "2" &&
     businessNumber === "5" &&
     businessAgency === "1"
   ) {
-    businessPlan = 160;
+    businessName = "Gamer";
+    businessMegas = 160;
+    businessPrice = "40.50";
     //Negocio, Mediano, 5+, Azuay - Pucara
   } else if (
     businessSize === "2" &&
     businessNumber === "5" &&
     businessAgency === "2"
   ) {
-    businessPlan = 45;
+    businessMegas = 45;
     //Negocio, Mediano, 5+, Bolivar - Las Naves
   } else if (
     businessSize === "2" &&
     businessNumber === "5" &&
     businessAgency === "3"
   ) {
-    businessPlan = 80;
+    businessName = "Gamer";
+    businessMegas = 80;
+    businessPrice = "42.24";
   }
   //Negocio, Mediano, 5+, Cañar - La Troncal
   else if (
@@ -1258,7 +1494,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "4"
   ) {
-    businessPlan = 100;
+    businessName = "Gamer";
+    businessMegas = 100;
+    businessPrice = "35.50";
   }
   //Negocio, Mediano, 5+, Loja - Loja
   else if (
@@ -1266,7 +1504,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "5"
   ) {
-    businessPlan = 200;
+    businessName = "Gamer";
+    businessMegas = 200;
+    businessPrice = "60.50";
   }
   //Negocio, Mediano, 5+, Los Ríos - Quinsaloma
   else if (
@@ -1274,7 +1514,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "6"
   ) {
-    businessPlan = 65;
+    businessName = "Pro";
+    businessMegas = 65;
+    businessPrice = "29.46";
   }
   //Negocio, Mediano, 5+, Pichincha - Quito
   else if (
@@ -1282,7 +1524,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "7"
   ) {
-    businessPlan = 100;
+    businessName = "Gamer";
+    businessMegas = 100;
+    businessPrice = "32.50";
   }
   //Negocio, Mediano, 5+, Santa Elena - La Libertad
   else if (
@@ -1290,7 +1534,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "8"
   ) {
-    businessPlan = 75;
+    businessName = "Gamer";
+    businessMegas = 75;
+    businessPrice = "29.50";
   }
   //Negocio, Mediano, 5+, Zamora Chinchipe - Yantzaza
   else if (
@@ -1298,7 +1544,7 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "9"
   ) {
-    businessPlan = 50;
+    businessMegas = 50;
   }
 
   /****** House Grande 5+ ******/
@@ -1308,21 +1554,25 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "1"
   ) {
-    businessPlan = 300;
+    businessName = "Platinium";
+    businessMegas = 300;
+    businessPrice = "72.50";
     //Negocio, Grande, 5+, Azuay - Pucara
   } else if (
     businessSize === "3" &&
     businessNumber === "5" &&
     businessAgency === "2"
   ) {
-    businessPlan = 45;
+    businessMegas = 45;
     //Negocio, Grande, 5+, Bolivar - Las Naves
   } else if (
     businessSize === "3" &&
     businessNumber === "5" &&
     businessAgency === "3"
   ) {
-    businessPlan = 100;
+    businessName = "Diamond";
+    businessMegas = 100;
+    businessPrice = "56.25";
   }
   //Negocio, Grande, 5+, Cañar - La Troncal
   else if (
@@ -1330,7 +1580,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "4"
   ) {
-    businessPlan = 200;
+    businessName = "Platinium";
+    businessMegas = 200;
+    businessPrice = "78.50";
   }
   //Negocio, Grande, 5+, Loja - Loja
   else if (
@@ -1338,7 +1590,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "5"
   ) {
-    businessPlan = 300;
+    businessName = "Diamond";
+    businessMegas = 300;
+    businessPrice = "90.50";
   }
   //Negocio, Grande, 5+, Los Ríos - Quinsaloma
   else if (
@@ -1346,7 +1600,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "6"
   ) {
-    businessPlan = 80;
+    businessName = "Gamer";
+    businessMegas = 80;
+    businessPrice = "42.24";
   }
   //Negocio, Grande, 5+, Pichincha - Quito
   else if (
@@ -1354,7 +1610,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "7"
   ) {
-    businessPlan = 200;
+    businessName = "Platinium";
+    businessMegas = 200;
+    businessPrice = "57.50";
   }
   //Negocio, Grande, 5+, Santa Elena - La Libertad
   else if (
@@ -1362,7 +1620,9 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "8"
   ) {
-    businessPlan = 160;
+    businessName = "Platinium";
+    businessMegas = 160;
+    businessPrice = "56.50";
   }
   //Negocio, Grande, 5+, Zamora Chinchipe - Yantzaza
   else if (
@@ -1370,19 +1630,19 @@ const IdealPlan = () => {
     businessNumber === "5" &&
     businessAgency === "9"
   ) {
-    businessPlan = 50;
+    businessMegas = 50;
   }
 
-  console.log("Casa tamaño: " + houseSize);
+  /* console.log("Casa tamaño: " + houseSize);
   console.log("Casa número: " + houseNumber);
   console.log("Casa agencia: " + houseAgency);
-  console.log("Casa Plan: " + housePlan);
+  console.log("Casa Plan: " + houseMegas); */
 
   /* console.log("Negocio tamaño: " + businessSize);
   console.log("Negocio número: " + businessNumber);
   console.log("Negocio agencia: " + businessAgency);
-  console.log("Negocio plan: " + businessPlan); */
-  // console.log(housePlan);
+  console.log("Negocio plan: " + businessMegas); */
+  // console.log(houseMegas);
 
   // useEffect(() => {
   //   console.log(houseSize);
@@ -1793,7 +2053,7 @@ const IdealPlan = () => {
                 >
                   <option value="">Seleccione</option>
                   <option value="1">Azuay - Cuenca</option>
-                  <option value="2">Azuay - Pucara</option>
+                  <option value="2">Azuay - Pucará</option>
                   <option value="3">Bolivar - Las Naves</option>
                   <option value="4">Cañar - La Troncal</option>
                   <option value="5">Loja - Loja</option>
@@ -1843,7 +2103,7 @@ const IdealPlan = () => {
                 >
                   <option value="">Seleccione</option>
                   <option value="1">Azuay - Cuenca</option>
-                  <option value="2">Azuay - Pucara</option>
+                  <option value="2">Azuay - Pucará</option>
                   <option value="3">Bolivar - Las Naves</option>
                   <option value="4">Cañar - La Troncal</option>
                   <option value="5">Loja - Loja</option>
@@ -1884,7 +2144,9 @@ const IdealPlan = () => {
                 size={houseSize}
                 number={houseNumber}
                 agency={houseAgency}
-                idealPlan={housePlan}
+                planMegas={houseMegas}
+                planPrice={housePrice}
+                planName={houseName}
               />
             </Col>
           </Row>
@@ -1910,7 +2172,9 @@ const IdealPlan = () => {
                 size={businessSize}
                 number={businessNumber}
                 agency={businessAgency}
-                idealPlan={businessPlan}
+                planMegas={businessMegas}
+                planPrice={businessPrice}
+                planName={businessName}
               />
             </Col>
           </Row>

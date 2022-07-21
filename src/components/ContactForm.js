@@ -148,7 +148,7 @@ const ContactForm = () => {
                   <option value="ventas.yantzaza@hallo.ec">
                     Azuay - Cuenca
                   </option>
-                  <option value="ventas.pucara@hallo.ec">Azuay - Pucara</option>
+                  <option value="ventas.pucara@hallo.ec">Azuay - Pucará</option>
                   <option value="ventas.lasnaves@hallo.ec">
                     Bolivar - Las Naves
                   </option>

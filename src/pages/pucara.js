@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const Zamora = () => {
+const Pucara = () => {
   const [nombre, setNombre] = useState("");
   const [megas, setMegas] = useState("");
   const [precio, setPrecio] = useState("");
@@ -24,7 +24,7 @@ const Zamora = () => {
     <Layout>
       <main>
         <Helmet>
-          <title>Zamora</title>
+          <title>Pucará</title>
           <meta
             name="keywords"
             content="hallo, internet, planes, velocidad, experiencia, distribuidores, ecuador"
@@ -51,7 +51,7 @@ const Zamora = () => {
           <Row>
             <Col md={12} className="px-0">
               <StaticImage
-                src="../images/agencias/zamora/hallo-zamora.jpg"
+                src="../images/agencias/pucara/hallo-pucara.jpg"
                 alt="Hallo banner"
                 layout="fullWidth"
               />
@@ -89,11 +89,11 @@ const Zamora = () => {
                             md={6}
                             className="px-md-4"
                             onClick={(e) =>
-                              openModal(e, "BASIC", "50", "$19.50")
+                              openModal(e, "BASIC", "45", "$19.50")
                             }
                           >
                             <StaticImage
-                              src="../images/agencias/zamora/planes/zamora-plan-basic.png"
+                              src="../images/agencias/pucara/planes/pucara-plan-basic.png"
                               alt="Hallo plan basic"
                               layout="fullWidth"
                             />
@@ -103,11 +103,11 @@ const Zamora = () => {
                             md={6}
                             className="px-md-4"
                             onClick={(e) =>
-                              openModal(e, "HOUSE", "75", "$23.50")
+                              openModal(e, "HOUSE", "80", "$23.50")
                             }
                           >
                             <StaticImage
-                              src="../images/agencias/zamora/planes/zamora-plan-house.png"
+                              src="../images/agencias/pucara/planes/pucara-plan-house.png"
                               alt="Hallo plan house"
                               layout="fullWidth"
                             />
@@ -131,75 +131,17 @@ const Zamora = () => {
                           <Col
                             xs={6}
                             md={6}
-                            className="px-md-4"
+                            className="px-md-4 mx-auto"
                             onClick={(e) =>
-                              openModal(e, "PRO", "100", "$30.50")
+                              openModal(e, "PRO", "100", "$29.50")
                             }
                           >
                             <StaticImage
-                              src="../images/agencias/zamora/planes/zamora-plan-pro.png"
+                              src="../images/agencias/pucara/planes/pucara-plan-pro.png"
                               alt="Hallo plan pro"
                               layout="fullWidth"
                             />
                           </Col>
-                          <Col
-                            xs={6}
-                            md={6}
-                            className="px-md-4"
-                            onClick={(e) =>
-                              openModal(e, "GAMER", "200", "$60.50")
-                            }
-                          >
-                            <StaticImage
-                              src="../images/agencias/zamora/planes/zamora-plan-gamer.png"
-                              alt="Hallo plan gamer"
-                              layout="fullWidth"
-                            />
-                          </Col>
-                        </Row>
-                      </Container>
-                    </div>
-                  </Col>
-                </Row>
-
-                <Row className="my-4">
-                  <Col md={2} className="my-auto text-center text-md-start">
-                    <h2 className="agency-title mb-0">
-                      PRO <span className="agency-subtitle">HALLO</span>
-                    </h2>
-                  </Col>
-                  <Col md={10} className="mt-2 mt-md-0">
-                    <div className="agency-card p-4 p-md-5">
-                      <Container className="px-0">
-                        <Row>
-                          <Col
-                            xs={6}
-                            md={6}
-                            className="px-md-4 mx-auto"
-                            onClick={(e) =>
-                              openModal(e, "PLATINUM", "300", "$90.50")
-                            }
-                          >
-                            <StaticImage
-                              src="../images/agencias/zamora/planes/zamora-plan-platinum.png"
-                              alt="Hallo plan platinum"
-                              layout="fullWidth"
-                            />
-                          </Col>
-                          {/* <Col
-                            xs={6}
-                            md={6}
-                            className="px-md-4"
-                            onClick={(e) =>
-                              openModal(e, "INFINITY", "200", "$78.50")
-                            }
-                          >
-                            <StaticImage
-                              src="../images/agencias/zamora/planes/zamora-plan-infinity.png"
-                              alt="Hallo plan infinity"
-                              layout="fullWidth"
-                            />
-                          </Col> */}
                         </Row>
                       </Container>
                     </div>
@@ -210,8 +152,8 @@ const Zamora = () => {
           </Row>
         </Container>
         <ModalPlan
-          planAgencia={"Zamora Chinchipe - Zamora"}
-          planEmail={"ventas.yantzaza@hallo.ec"}
+          planAgencia={"Azuay - Pucará"}
+          planEmail={"ventas.cuenca@hallo.ec"}
           planNombre={nombre}
           planMegas={megas}
           planPrecio={precio}
@@ -223,4 +165,4 @@ const Zamora = () => {
   );
 };
 
-export default Zamora;
+export default Pucara;

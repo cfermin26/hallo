@@ -9,7 +9,15 @@ import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 
-const PlanForm = ({ type, size, number, agency, idealPlan }) => {
+const PlanForm = ({
+  type,
+  size,
+  number,
+  agency,
+  planMegas,
+  planName,
+  planPrice,
+}) => {
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -33,7 +41,9 @@ const PlanForm = ({ type, size, number, agency, idealPlan }) => {
   var tipo = type;
   var numero = number;
   var agencia = agency;
-  var megas = idealPlan;
+  var megas = planMegas;
+  var price = planPrice;
+  var name = planName;
   var destinatario;
   var nombreAgencia;
   var tamano;
@@ -75,13 +85,15 @@ const PlanForm = ({ type, size, number, agency, idealPlan }) => {
     tamano = "Grande";
   }
 
-  /* console.log("tipo: " + tipo);
+  console.log("tipo: " + tipo);
   console.log("tamaño: " + tamano);
   console.log("numero: " + numero);
   console.log("agencia:" + agencia);
-  console.log("plan:" + plan);
+  console.log("megas:" + megas);
+  console.log("precio:" + price);
+  console.log("nombre:" + name);
   console.log("destinatario:" + destinatario);
-  console.log("agencia: " + nombreAgencia); */
+  console.log("agencia: " + nombreAgencia);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -96,7 +108,9 @@ const PlanForm = ({ type, size, number, agency, idealPlan }) => {
     dataForm.append("tipo", tipo);
     dataForm.append("tamano", tamano);
     dataForm.append("numero", numero);
-    dataForm.append("megas", megas);
+    dataForm.append("plan_megas", megas);
+    dataForm.append("plan_precio", price);
+    dataForm.append("plan_nombre", name);
     dataForm.append("mensaje", mensaje);
     dataForm.append("destinatario", destinatario);
     const respuesta = await axios.post(
@@ -139,13 +153,35 @@ const PlanForm = ({ type, size, number, agency, idealPlan }) => {
       <Form className="contact-form mx-auto py-4" onSubmit={handleSubmit}>
         <Container className="px-2">
           <Row>
-            <Col md={12} className="mt-4 pt-2 mt-md-0">
+            <Col md={12} className="pt-md-2 ">
               <h2 className="info-title-plan">TU PLAN IDEAL RECOMENDADO</h2>
+            </Col>
+          </Row>
+
+          <Row className="my-3 my-md-4">
+            <Col
+              md={6}
+              className="d-flex justify-content-center justify-content-md-end"
+            >
               <h2 className="info-title">
-                <h3 className="agency-card-plan p-2 p-md-3 mx-auto">
-                  {megas} MEGAS
+                <h3 className="agency-card-plan p-2 p-md-3 me-auto">
+                  PLAN {name} {megas} MEGAS
                 </h3>
               </h2>
+            </Col>
+            <Col
+              md={6}
+              className="d-flex justify-content-center justify-content-md-start"
+            >
+              <h2 className="info-title">
+                <h3 className="agency-card-plan ideal-price p-2 p-md-3 me-auto">
+                  Precio {price} + IVA
+                </h3>
+              </h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
               <h2 className="info-title-plan">ACTIVA TU PAQUETE</h2>
             </Col>
           </Row>
