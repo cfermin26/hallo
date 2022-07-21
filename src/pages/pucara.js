@@ -89,7 +89,7 @@ const Pucara = () => {
                             md={6}
                             className="px-md-4"
                             onClick={(e) =>
-                              openModal(e, "BASIC", "45", "$19.50")
+                              openModal(e, "BASIC", "45", "$19.64")
                             }
                           >
                             <StaticImage
@@ -103,7 +103,7 @@ const Pucara = () => {
                             md={6}
                             className="px-md-4"
                             onClick={(e) =>
-                              openModal(e, "HOUSE", "80", "$23.50")
+                              openModal(e, "HOUSE", "55", "$22.32")
                             }
                           >
                             <StaticImage
@@ -132,9 +132,7 @@ const Pucara = () => {
                             xs={6}
                             md={6}
                             className="px-md-4 mx-auto"
-                            onClick={(e) =>
-                              openModal(e, "PRO", "100", "$29.50")
-                            }
+                            onClick={(e) => openModal(e, "PRO", "65", "$29.46")}
                           >
                             <StaticImage
                               src="../images/agencias/pucara/planes/pucara-plan-pro.png"
